@@ -1,3 +1,4 @@
+import EnrollButton from "./EnrollButton";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -11,9 +12,7 @@ return (
       <a href="#about" className="hover:text-blue-400 transition">
         About
       </a>
-      <a href="#internship" className="hover:text-blue-400 transition">
-        Internship
-      </a>
+      <EnrollButton />
 
       <Link
         href="https://code.cookiesensei.com"

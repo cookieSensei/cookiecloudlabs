@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
@@ -13,7 +14,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-slate-950 text-white overflow-x-hidden">
+
+        <Script
+          src="https://checkout.razorpay.com/v1/checkout.js"
+          strategy="beforeInteractive"
+        />
+
         {children}
+
       </body>
     </html>
   );
