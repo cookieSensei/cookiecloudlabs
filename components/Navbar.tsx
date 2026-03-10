@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import EnrollButton from "./EnrollButton";
+
 
 export default function Navbar() {
 
@@ -25,7 +25,12 @@ export default function Navbar() {
           About
         </Link>
 
-        <EnrollButton />
+        <Link
+          href="/enroll"
+          className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold"
+        >
+          Enroll
+        </Link>
 
         <Link
           href="https://code.cookiesensei.com"
@@ -54,7 +59,12 @@ export default function Navbar() {
             About
           </Link>
 
-          <EnrollButton />
+          <Link
+            href="/enroll"
+            className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold text-center"
+          >
+            Enroll
+          </Link>
 
           <Link
             href="https://code.cookiesensei.com"
