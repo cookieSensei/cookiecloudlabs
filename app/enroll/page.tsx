@@ -13,6 +13,20 @@ export default function EnrollPage() {
 
     try {
 
+        // SEND DATA TO GOOGLE SHEET
+        await fetch("https://script.google.com/macros/s/AKfycby5W3sHm4wtZBx92M7sT7mJQMa9BwPDHL8PwVRJNiRNJhhekMk0-IE5BMPKT-_tzd7uQw/exec", {
+        method: "POST",
+        body: JSON.stringify({
+            name,
+            email,
+            phone
+        }), headers: {
+            "Content-Type": "application/json"
+        }
+        });
+
+
+
       const res = await fetch("/api/create-order", {
         method: "POST"
       });
