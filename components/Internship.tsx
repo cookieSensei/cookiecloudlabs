@@ -1,7 +1,7 @@
 export default function Internship() {
   return (
     <section className="w-full py-20 bg-[#0b1220] text-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -89,63 +89,87 @@ export default function Internship() {
           </div>
         </div>
 
-        {/* Achievements */}
-        <div className="mt-20 text-center">
 
-          <h3 className="text-3xl font-semibold mb-6">
-            What You'll Achieve
-          </h3>
+        {/* Bootcamp + Video Section */}
+        <div className="mt-24 grid md:grid-cols-2 gap-16 items-start">
 
-          <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-4 text-gray-300">
+          {/* LEFT SIDE */}
+          <div>
 
-            <p>✔ Build a real AI / ML capstone project</p>
-            <p>✔ Contribute to a shared GitHub repository</p>
-            <p>✔ Collaborate like real AI engineers</p>
-            <p>✔ Learn the industry AI workflow</p>
-            <p>✔ Build a strong AI portfolio</p>
-            <p>✔ Gain practical machine learning experience</p>
+            {/* Achievements */}
+            <h3 className="text-3xl font-semibold mb-6">
+              What You'll Achieve
+            </h3>
+
+            <div className="grid md:grid-cols-2 gap-4 text-gray-300 mb-12">
+
+              <p>✔ Build a real AI / ML capstone project</p>
+              <p>✔ Contribute to a shared GitHub repository</p>
+              <p>✔ Collaborate like real AI engineers</p>
+              <p>✔ Learn the industry AI workflow</p>
+              <p>✔ Build a strong AI portfolio</p>
+              <p>✔ Gain practical machine learning experience</p>
+
+            </div>
+
+            {/* Bootcamp Details */}
+            <h3 className="text-3xl font-semibold mb-6">
+              Bootcamp Details
+            </h3>
+
+            <div className="space-y-3 text-gray-300 mb-10">
+              <p>🗓 Duration: <span className="font-semibold">4 Weeks</span></p>
+              <p>🧠 2 Weeks Learning AI Fundamentals</p>
+              <p>🚀 2 Weeks Building a Real AI Capstone Project</p>
+              <p>☁️ Cloud Labs Included</p>
+              <p>👥 Maximum 6 Students Per Cohort</p>
+            </div>
+
+            {/* Bootcamp Pricing */}
+            <div className="p-6 border border-white/10 rounded-xl bg-white/5">
+
+              <h3 className="text-2xl font-semibold mb-4">
+                Bootcamp Fee
+              </h3>
+
+              <p className="text-xl font-bold text-green-400 mb-4">
+                ₹29,999
+              </p>
+
+              <p className="mb-2">Includes:</p>
+
+              <ul className="list-disc ml-6 space-y-1 text-gray-300">
+                <li>Cloud AI development environment</li>
+                <li>4-week AI engineering bootcamp</li>
+                <li>Capstone project collaboration</li>
+              </ul>
+
+            </div>
 
           </div>
 
-        </div>
 
-        {/* Bootcamp Details */}
-        <div className="mt-20 text-center border-t border-gray-800 pt-12">
+          {/* RIGHT SIDE — VIDEO DEMO */}
+          <div>
 
-          <h3 className="text-3xl font-semibold mb-6">
-            Bootcamp Details
-          </h3>
+            <div className="aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-lg">
 
-          <div className="space-y-3 text-gray-300">
-            <p>🗓 Duration: <span className="font-semibold">4 Weeks</span></p>
-            <p>🧠 2 Weeks Learning AI Fundamentals</p>
-            <p>🚀 2 Weeks Building a Real AI Capstone Project</p>
-            <p>☁️ Cloud Labs Included</p>
-            <p>👥 Maximum 6 Students Per Cohort</p>
-          </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/CLvnbPW2qwA"
+                title="CookieSensei AI Cloud Lab Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
 
-          {/* Bootcamp Pricing */}
-          <div className="mt-8 p-6 border border-white/10 rounded-xl bg-white/5">
-            <h3 className="text-2xl font-semibold mb-4">Bootcamp Fee</h3>
+            </div>
 
-            <p className="text-xl font-bold text-green-400 mb-4">
-              ₹29,999
+            <p className="text-gray-400 text-sm mt-4 text-center">
+              Watch how the CookieSensei cloud AI lab works
             </p>
 
-            <p className="mb-2">Includes:</p>
-
-            <ul className="list-disc ml-6 space-y-1">
-              <li>Cloud AI development environment</li>
-              <li>4-week AI engineering bootcamp</li>
-              <li>Capstone project collaboration</li>
-            </ul>
           </div>
-
-
-
-
-
-
 
         </div>
 
