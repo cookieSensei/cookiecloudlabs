@@ -1,6 +1,8 @@
 import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "CookieCloud Labs",
@@ -20,8 +22,10 @@ export default function RootLayout({
           src="https://checkout.razorpay.com/v1/checkout.js"
           strategy="beforeInteractive"
         />
-
+        <Navbar />
         {children}
+
+        <BackToTop />
         <Footer />
       </body>
     </html>

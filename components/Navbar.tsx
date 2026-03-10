@@ -12,16 +12,18 @@ export default function Navbar() {
     <header className="w-full px-4 md:px-10 py-4 flex justify-between items-center relative">
 
       {/* Logo */}
-      <h1 className="text-lg md:text-xl font-bold">
-        CookieSensei
-      </h1>
+      <Link href="/">
+        <h1 className="text-lg md:text-xl font-bold cursor-pointer">
+          CookieSensei
+        </h1>
+      </Link>
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex items-center gap-6">
 
-        <a href="#about" className="hover:text-blue-400">
+        <Link href="/about" className="hover:text-blue-400 transition">
           About
-        </a>
+        </Link>
 
         <EnrollButton />
 
@@ -46,13 +48,11 @@ export default function Navbar() {
       {menuOpen && (
         <div className="absolute right-4 top-16 bg-slate-900 border border-slate-700 rounded-lg shadow-xl p-6 flex flex-col gap-4 z-50 md:hidden">
 
-          <a
-            href="#about"
-            onClick={() => setMenuOpen(false)}
-            className="hover:text-blue-400"
-          >
+          
+
+          <Link href="/about" className="hover:text-blue-400 transition">
             About
-          </a>
+          </Link>
 
           <EnrollButton />
 
