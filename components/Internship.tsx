@@ -117,14 +117,35 @@ export default function Internship() {
           </h3>
 
           <div className="space-y-3 text-gray-300">
-
-            <p>📅 Duration: <span className="font-semibold">4 Weeks</span></p>
+            <p>🗓 Duration: <span className="font-semibold">4 Weeks</span></p>
             <p>🧠 2 Weeks Learning AI Fundamentals</p>
             <p>🚀 2 Weeks Building a Real AI Capstone Project</p>
             <p>☁️ Cloud Labs Included</p>
-            <p>👨‍💻 Maximum 6 Students Per Cohort</p>
-
+            <p>👥 Maximum 6 Students Per Cohort</p>
           </div>
+
+          {/* Bootcamp Pricing */}
+          <div className="mt-8 p-6 border border-white/10 rounded-xl bg-white/5">
+            <h3 className="text-2xl font-semibold mb-4">Bootcamp Fee</h3>
+
+            <p className="text-xl font-bold text-green-400 mb-4">
+              ₹29,999
+            </p>
+
+            <p className="mb-2">Includes:</p>
+
+            <ul className="list-disc ml-6 space-y-1">
+              <li>Cloud AI development environment</li>
+              <li>4-week AI engineering bootcamp</li>
+              <li>Capstone project collaboration</li>
+            </ul>
+          </div>
+
+
+
+
+
+
 
         </div>
 
