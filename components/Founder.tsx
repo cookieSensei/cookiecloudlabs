@@ -30,7 +30,7 @@ export default function Founder() {
             </p>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
-              I started building this because I kept seeing engineering students struggle 
+              I started building this because I kept seeing students struggle 
               with something that shouldn’t be the hardest part of learning AI — 
               setting up the environment.
             </p>
