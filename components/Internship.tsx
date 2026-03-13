@@ -5,28 +5,36 @@ export default function Internship() {
 
         {/* Section Title */}
         <div className="text-center mb-16">
+
+          <p className="text-yellow-400 text-sm uppercase tracking-wider mb-3">
+            4 Week Cohort Bootcamp
+          </p>
+
           <h2 className="text-4xl font-bold mb-4">
             AI / ML Engineering Bootcamp
           </h2>
 
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Learn Artificial Intelligence by building real AI systems.
-            This bootcamp focuses on practical skills, real engineering workflows,
+            Learn Artificial Intelligence and Machine Learning by building real AI systems.
+            This bootcamp focuses on practical engineering skills, real developer workflows,
             and collaboration like professional AI engineers.
           </p>
+
         </div>
+
 
         {/* Bootcamp Structure */}
         <div className="grid md:grid-cols-2 gap-10">
 
           {/* Week 1–2 */}
           <div className="bg-[#111827] p-8 rounded-xl border border-gray-800">
+
             <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
-              Week 1–2: Learn AI Skills
+              Week 1–2: AI Foundations
             </h3>
 
             <ul className="space-y-3 text-gray-300">
-              <li>• Python for AI</li>
+              <li>• Python for AI development</li>
               <li>• Exploratory Data Analysis</li>
               <li>• NumPy & Pandas</li>
               <li>• Machine Learning with Scikit-Learn</li>
@@ -35,13 +43,16 @@ export default function Internship() {
             </ul>
 
             <p className="mt-6 text-gray-400 text-sm">
-              Students learn the core skills required to build real AI systems
+              Students build the core skills required to work with AI systems
               and prepare for the final capstone project.
             </p>
+
           </div>
+
 
           {/* Week 3–4 */}
           <div className="bg-[#111827] p-8 rounded-xl border border-gray-800">
+
             <h3 className="text-2xl font-semibold mb-6 text-yellow-400">
               Week 3–4: Final AI Capstone Project
             </h3>
@@ -56,42 +67,111 @@ export default function Internship() {
             </ul>
 
             <p className="mt-6 text-gray-400 text-sm">
-              Students collaborate on a real AI project and build a
-              production-style capstone system together.
+              During the final two weeks, students collaborate on a real AI
+              system and build a production-style capstone project together.
             </p>
+
           </div>
 
         </div>
 
-        {/* Workflow Section */}
-        <div className="mt-20">
 
-          <h3 className="text-3xl font-semibold text-center mb-10">
-            Real Engineering Workflow
-          </h3>
+        {/* Engineering Workflow */}
+        {/* Cloud Labs Section */}
+        <div className="mt-20 text-center">
 
-          <div className="grid md:grid-cols-2 gap-8 text-gray-300">
+          <h2 className="text-3xl font-bold mb-6">
+            Hands-On Cloud AI Labs
+          </h2>
 
-            <ul className="space-y-3">
-              <li>• Cloud-based coding workspace</li>
-              <li>• Preconfigured AI development stack</li>
-              <li>• GPU access for deep learning</li>
-              <li>• Full VS Code development environment</li>
-            </ul>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+            Every student gets access to a cloud coding environment.
+            No installations, no environment setup issues.
 
-            <ul className="space-y-3">
-              <li>• Join a shared GitHub repository</li>
-              <li>• Collaborative team workflow</li>
-              <li>• Pull requests & code reviews</li>
-              <li>• Build projects like real AI engineers</li>
-            </ul>
+            Just open your browser and start building AI models instantly.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-gray-300">
+
+            <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
+              <h3 className="font-semibold text-lg mb-2">
+                No Setup Required
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Skip installing Python, ML libraries, and complex environments.
+              </p>
+            </div>
+
+            <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
+              <h3 className="font-semibold text-lg mb-2">
+                Runs in Your Browser
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Open the lab in your browser and start coding immediately.
+              </p>
+            </div>
+
+            <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
+              <h3 className="font-semibold text-lg mb-2">
+                Preconfigured AI Stack
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Python, NumPy, Pandas, TensorFlow and other AI tools are ready to use.
+              </p>
+            </div>
 
           </div>
+
         </div>
 
 
+          {/* Who This Bootcamp Is For */}
+          <div className="mt-24">
+
+            <h3 className="text-3xl font-semibold text-center mb-12">
+              Who This Bootcamp Is For
+            </h3>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-gray-300">
+
+              <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
+                <h4 className="text-xl font-semibold mb-4 text-green-400">
+                  Perfect For
+                </h4>
+
+                <ul className="space-y-2">
+                  <li>• College students curious about AI</li>
+                  <li>• Beginners who want to enter AI / ML</li>
+                  <li>• Students who want real projects</li>
+                  <li>• Anyone interested in building AI systems</li>
+                </ul>
+              </div>
+
+              <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
+                <h4 className="text-xl font-semibold mb-4 text-red-400">
+                  Not Ideal For
+                </h4>
+
+                <ul className="space-y-2">
+                  <li>• Advanced machine learning engineers</li>
+                  <li>• People looking for deep math theory</li>
+                  <li>• Researchers focusing on ML papers</li>
+                  <li>• Experienced AI professionals</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
         {/* Bootcamp + Video Section */}
+
+
+        
+
+
+
         <div className="mt-24 grid md:grid-cols-2 gap-16 items-start">
+
 
           {/* LEFT SIDE */}
           <div>
@@ -112,18 +192,22 @@ export default function Internship() {
 
             </div>
 
+
             {/* Bootcamp Details */}
             <h3 className="text-3xl font-semibold mb-6">
               Bootcamp Details
             </h3>
 
             <div className="space-y-3 text-gray-300 mb-10">
+
               <p>🗓 Duration: <span className="font-semibold">4 Weeks</span></p>
-              <p>🧠 2 Weeks Learning AI Fundamentals</p>
-              <p>🚀 2 Weeks Building a Real AI Capstone Project</p>
-              <p>☁️ Cloud Labs Included</p>
+              <p>🧠 2 Weeks Learning AI Foundations</p>
+              <p>🚀 2 Weeks Building the Capstone Project</p>
+              <p>☁️ Browser-Based Cloud AI Labs</p>
               <p>👥 Maximum 6 Students Per Cohort</p>
+
             </div>
+
 
             {/* Bootcamp Pricing */}
             <div className="p-6 border border-white/10 rounded-xl bg-white/5">
@@ -139,9 +223,10 @@ export default function Internship() {
               <p className="mb-2">Includes:</p>
 
               <ul className="list-disc ml-6 space-y-1 text-gray-300">
+                <li>4 Week AI / ML Engineering Bootcamp</li>
                 <li>Cloud AI development environment</li>
-                <li>4-week AI engineering bootcamp</li>
-                <li>Capstone project collaboration</li>
+                <li>Team capstone project collaboration</li>
+                <li>Real-world GitHub workflow</li>
               </ul>
 
             </div>
@@ -149,6 +234,8 @@ export default function Internship() {
           </div>
 
 
+
+          {/* RIGHT SIDE — VIDEO DEMO */}
           {/* RIGHT SIDE — VIDEO DEMO */}
           <div>
 
@@ -167,6 +254,11 @@ export default function Internship() {
 
             <p className="text-gray-400 text-sm mt-4 text-center">
               Watch how the CookieSensei cloud AI lab works
+            </p>
+
+            {/* NEW LINE */}
+            <p className="text-green-400 text-center mt-2">
+              Students receive their own personal AI lab environment.
             </p>
 
           </div>

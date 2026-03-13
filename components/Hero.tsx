@@ -18,32 +18,31 @@ export default function Hero() {
       <div className="relative z-10 px-6 max-w-5xl">
 
         {/* Headline with Glow */}
-        <h1 className="relative text-6xl md:text-8xl font-extrabold tracking-tight leading-tight">
+        <h1 className="relative text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
 
-          {/* Glow Layer */}
-          <span className="absolute inset-0 blur-3xl opacity-40 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Build AI Without Setup Headaches
-          </span>
-
-          {/* Main Text */}
-          <span className="relative bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_15px_40px_rgba(0,0,0,0.8)]">
-            Build AI Without Setup Headaches
+          <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+            4-Week AI/ML Bootcamp
           </span>
 
         </h1>
 
-        {/* Subtitle */}
-        <p className="mt-8 text-xl md:text-2xl text-gray-200 font-medium max-w-3xl mx-auto drop-shadow-lg">
-          Stop fighting installations. Start building real AI systems in the cloud.
+        <p className="mt-8 text-xl md:text-2xl text-gray-200 font-medium max-w-3xl mx-auto">
+        Learn Artificial Intelligence & Machine Learning from scratch and build a real AI project.
+
+        Designed for college students from non-tech backgrounds.
         </p>
 
         {/* CTA Button */}
         <a
-          href="https://code.cookiesensei.com"
-          className="inline-block mt-12 bg-gradient-to-r from-blue-500 to-purple-600 px-12 py-5 rounded-2xl font-bold text-lg shadow-[0_20px_50px_rgba(139,92,246,0.4)] hover:scale-105 hover:shadow-[0_25px_60px_rgba(139,92,246,0.6)] transition duration-300"
-        >
-          Enter CookieCloud Lab
-        </a>
+          href="/enroll"
+          className="inline-block mt-12 bg-gradient-to-r from-blue-500 to-purple-600 px-12 py-5 rounded-2xl font-bold text-lg shadow-lg hover:scale-105 transition"
+          >
+          Apply for the Bootcamp
+          </a>
+
+          <p className="mt-4 text-gray-300 text-sm">
+          4 week cohort • Live classes • Cloud labs • Only 6 students
+          </p>
 
       </div>
     </section>

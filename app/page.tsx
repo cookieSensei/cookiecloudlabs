@@ -3,6 +3,8 @@ import About from "@/components/About";
 import Internship from "@/components/Internship";
 import Footer from "@/components/Footer";
 import Founder from "@/components/Founder";
+import BootcampTimeline from "@/components/BootcampTimeline";
+import CloudLabs from "@/components/CloudLabs";
 
 
 export default function Home() {
@@ -10,8 +12,9 @@ export default function Home() {
     <>
 
       <Hero />
-      <About />
-      <Internship />
+      <BootcampTimeline />
+      <Internship/>
+      <CloudLabs/>
       <Founder/>
       
       
