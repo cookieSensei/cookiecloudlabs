@@ -7,25 +7,39 @@ export default function EnrollPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [college, setCollege] = useState("");
+  const [degree, setDegree] = useState("");
 
-  async function handleSubmit(e:any) {
+  async function sendToSheet(type: string) {
+
+    await fetch("https://script.google.com/macros/s/AKfycby5W3sHm4wtZBx92M7sT7mJQMa9BwPDHL8PwVRJNiRNJhhekMk0-IE5BMPKT-_tzd7uQw/exec", {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify({
+      name,
+      email,
+      phone,
+      college,
+      degree,
+      message,
+      type,
+      payment: type === "enrollment" ? "pending" : ""
+    }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+  }
+
+  async function handleEnroll(e:any) {
+
     e.preventDefault();
 
     try {
 
-        // SEND DATA TO GOOGLE SHEET
-        await fetch("https://script.google.com/macros/s/AKfycby5W3sHm4wtZBx92M7sT7mJQMa9BwPDHL8PwVRJNiRNJhhekMk0-IE5BMPKT-_tzd7uQw/exec", {
-        method: "POST",
-        body: JSON.stringify({
-            name,
-            email,
-            phone
-        }), headers: {
-            "Content-Type": "application/json"
-        }
-        });
-
-
+      await sendToSheet("enrollment");
 
       const res = await fetch("/api/create-order", {
         method: "POST"
@@ -63,6 +77,24 @@ export default function EnrollPage() {
     }
   }
 
+  async function handleQuery() {
+
+    try {
+
+      await sendToSheet("query");
+
+      alert("Your query has been sent! We'll contact you soon.");
+
+      setMessage("");
+
+    } catch {
+
+      alert("Failed to send query.");
+
+    }
+
+  }
+
   return (
 
     <main className="max-w-xl mx-auto py-20 px-6">
@@ -76,7 +108,7 @@ export default function EnrollPage() {
       </p>
 
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleEnroll}
         className="flex flex-col gap-4"
       >
 
@@ -107,12 +139,57 @@ export default function EnrollPage() {
           className="p-3 rounded bg-slate-900 border border-slate-700"
         />
 
-        <button
-          type="submit"
-          className="bg-yellow-500 text-black font-semibold py-3 rounded-lg mt-4"
-        >
-          Proceed to Payment
-        </button>
+
+        <input
+          type="text"
+          placeholder="College Name"
+          required
+          value={college}
+          onChange={(e)=>setCollege(e.target.value)}
+          className="p-3 rounded bg-slate-900 border border-slate-700"
+        />
+
+        <input
+          type="text"
+          placeholder="Degree (BBA, BCom, Mechanical, etc)"
+          required
+          value={degree}
+          onChange={(e)=>setDegree(e.target.value)}
+          className="p-3 rounded bg-slate-900 border border-slate-700"
+/>
+
+
+
+
+        <textarea
+          placeholder="Ask anything about the bootcamp, schedule, prerequisites..."
+          value={message}
+          onChange={(e)=>setMessage(e.target.value)}
+          className="p-3 rounded bg-slate-900 border border-slate-700 min-h-[120px]"
+        />
+
+        <p className="text-sm text-slate-400">
+          Not sure yet? Send us a question before enrolling.
+        </p>
+
+        <div className="flex gap-4 mt-2">
+
+          <button
+            type="button"
+            onClick={handleQuery}
+            className="flex-1 border border-slate-600 text-slate-300 py-3 rounded-lg hover:bg-slate-800"
+          >
+            Send Query
+          </button>
+
+          <button
+            type="submit"
+            className="flex-1 bg-yellow-500 text-black font-semibold py-3 rounded-lg"
+          >
+            Enroll Now
+          </button>
+
+        </div>
 
       </form>
 
