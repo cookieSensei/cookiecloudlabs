@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     key_secret: process.env.RAZORPAY_KEY_SECRET!,
   });
 
-  const price = 29999;
+  const price = 3999;
 
   const order = await razorpay.orders.create({
     amount: price * 100,
