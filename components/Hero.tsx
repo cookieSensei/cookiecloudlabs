@@ -18,31 +18,29 @@ export default function Hero() {
       <div className="relative z-10 px-6 max-w-5xl">
 
         {/* Headline with Glow */}
-        <h1 className="relative text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
 
-          <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            4-Week AI/ML Bootcamp
-          </span>
+          Become an AI Engineer in 4 Weeks
 
-        </h1>
+          </h1>
 
-        <p className="mt-8 text-xl md:text-2xl text-gray-200 font-medium max-w-3xl mx-auto">
-        Learn Artificial Intelligence & Machine Learning from scratch and build a real AI project.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
 
-        Designed for college students from non-tech backgrounds.
-        </p>
+          Learn Artificial Intelligence from scratch and build a real AI project.
 
-        {/* CTA Button */}
-        <a
-          href="/enroll"
-          className="inline-block mt-12 bg-gradient-to-r from-blue-500 to-purple-600 px-12 py-5 rounded-2xl font-bold text-lg shadow-lg hover:scale-105 transition"
-          >
-          Apply for the Bootcamp
-          </a>
+          • Beginner friendly  
+          • Live cohort program  
+          • Personal cloud AI lab  
+          • Only 6 students per cohort
 
-          <p className="mt-4 text-gray-300 text-sm">
-          4 week cohort • Live classes • Cloud labs • Only 6 students
           </p>
+
+          <a
+          href="/enroll"
+          className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-lg text-lg"
+          >
+          Apply for the Cohort
+          </a>
 
       </div>
     </section>

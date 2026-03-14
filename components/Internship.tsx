@@ -125,44 +125,8 @@ export default function Internship() {
         </div>
 
 
-          {/* Who This Bootcamp Is For */}
-          <div className="mt-24">
-
-            <h3 className="text-3xl font-semibold text-center mb-12">
-              Who This Bootcamp Is For
-            </h3>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-gray-300">
-
-              <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
-                <h4 className="text-xl font-semibold mb-4 text-green-400">
-                  Perfect For
-                </h4>
-
-                <ul className="space-y-2">
-                  <li>• College students curious about AI</li>
-                  <li>• Beginners who want to enter AI / ML</li>
-                  <li>• Students who want real projects</li>
-                  <li>• Anyone interested in building AI systems</li>
-                </ul>
-              </div>
-
-              <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
-                <h4 className="text-xl font-semibold mb-4 text-red-400">
-                  Not Ideal For
-                </h4>
-
-                <ul className="space-y-2">
-                  <li>• Advanced machine learning engineers</li>
-                  <li>• People looking for deep math theory</li>
-                  <li>• Researchers focusing on ML papers</li>
-                  <li>• Experienced AI professionals</li>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
+       
+       
         {/* Bootcamp + Video Section */}
 
 
@@ -217,8 +181,12 @@ export default function Internship() {
               </h3>
 
               <p className="text-xl font-bold text-green-400 mb-4">
-                ₹29,999
-              </p>
+                ₹3,999 Early Cohort Price
+                </p>
+
+                <p className="text-gray-400 text-sm mb-4">
+                Regular price ₹14,999
+                </p>
 
               <p className="mb-2">Includes:</p>
 

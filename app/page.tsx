@@ -5,19 +5,19 @@ import Footer from "@/components/Footer";
 import Founder from "@/components/Founder";
 import BootcampTimeline from "@/components/BootcampTimeline";
 import CloudLabs from "@/components/CloudLabs";
-
+import Capstone from "@/components/Capstone"
+import Audience from "@/components/Audience"
+import CTA from "@/components/CTA"
 
 export default function Home() {
   return (
     <>
-
-      <Hero />
-      <BootcampTimeline />
-      <Internship/>
-      <CloudLabs/>
-      <Founder/>
-      
-      
+    <Hero />
+    <Capstone />
+    <Internship />
+    <Audience />
+    <Founder />
+    <CTA />
     </>
   );
 }
