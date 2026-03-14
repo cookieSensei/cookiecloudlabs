@@ -76,8 +76,7 @@ export default function Internship() {
         </div>
 
 
-        {/* Engineering Workflow */}
-        {/* Cloud Labs Section */}
+        {/* Cloud Labs */}
         <div className="mt-20 text-center">
 
           <h2 className="text-3xl font-bold mb-6">
@@ -87,7 +86,6 @@ export default function Internship() {
           <p className="text-gray-400 max-w-2xl mx-auto mb-12">
             Every student gets access to a cloud coding environment.
             No installations, no environment setup issues.
-
             Just open your browser and start building AI models instantly.
           </p>
 
@@ -125,27 +123,17 @@ export default function Internship() {
         </div>
 
 
-       
-       
-        {/* Bootcamp + Video Section */}
-
-
-        
-
-
-
+        {/* Achievements + Video */}
         <div className="mt-24 grid md:grid-cols-2 gap-16 items-start">
-
 
           {/* LEFT SIDE */}
           <div>
 
-            {/* Achievements */}
             <h3 className="text-3xl font-semibold mb-6">
               What You'll Achieve
             </h3>
 
-            <div className="grid md:grid-cols-2 gap-4 text-gray-300 mb-12">
+            <div className="grid md:grid-cols-2 gap-4 text-gray-300">
 
               <p>✔ Build a real AI / ML capstone project</p>
               <p>✔ Contribute to a shared GitHub repository</p>
@@ -156,55 +144,10 @@ export default function Internship() {
 
             </div>
 
-
-            {/* Bootcamp Details */}
-            <h3 className="text-3xl font-semibold mb-6">
-              Bootcamp Details
-            </h3>
-
-            <div className="space-y-3 text-gray-300 mb-10">
-
-              <p>🗓 Duration: <span className="font-semibold">4 Weeks</span></p>
-              <p>🧠 2 Weeks Learning AI Foundations</p>
-              <p>🚀 2 Weeks Building the Capstone Project</p>
-              <p>☁️ Browser-Based Cloud AI Labs</p>
-              <p>👥 Maximum 6 Students Per Cohort</p>
-
-            </div>
-
-
-            {/* Bootcamp Pricing */}
-            <div className="p-6 border border-white/10 rounded-xl bg-white/5">
-
-              <h3 className="text-2xl font-semibold mb-4">
-                Bootcamp Fee
-              </h3>
-
-              <p className="text-xl font-bold text-green-400 mb-4">
-                ₹3,999 Early Cohort Price
-                </p>
-
-                <p className="text-gray-400 text-sm mb-4">
-                Regular price ₹14,999
-                </p>
-
-              <p className="mb-2">Includes:</p>
-
-              <ul className="list-disc ml-6 space-y-1 text-gray-300">
-                <li>4 Week AI / ML Engineering Bootcamp</li>
-                <li>Cloud AI development environment</li>
-                <li>Team capstone project collaboration</li>
-                <li>Real-world GitHub workflow</li>
-              </ul>
-
-            </div>
-
           </div>
 
 
-
-          {/* RIGHT SIDE — VIDEO DEMO */}
-          {/* RIGHT SIDE — VIDEO DEMO */}
+          {/* RIGHT SIDE VIDEO */}
           <div>
 
             <div className="aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-lg">
@@ -224,10 +167,69 @@ export default function Internship() {
               Watch how the CookieSensei cloud AI lab works
             </p>
 
-            {/* NEW LINE */}
             <p className="text-green-400 text-center mt-2">
               Students receive their own personal AI lab environment.
             </p>
+
+          </div>
+
+        </div>
+
+
+        {/* Bootcamp Details + Pricing */}
+        <div className="mt-20 grid md:grid-cols-2 gap-16 items-start">
+
+          {/* DETAILS */}
+          <div>
+
+            <h3 className="text-3xl font-semibold mb-6">
+              Bootcamp Details
+            </h3>
+
+            <div className="space-y-3 text-gray-300">
+
+              <p>🗓 Duration: <span className="font-semibold">4 Weeks</span></p>
+
+              <p>🧠 2 Weeks Learning AI Foundations</p>
+
+              <p>🚀 2 Weeks Building the Capstone Project</p>
+
+              <p>☁️ Browser-Based Cloud AI Labs</p>
+
+              <p>👥 Maximum 6 Students Per Cohort</p>
+
+            </div>
+
+          </div>
+
+
+          {/* PRICE CARD */}
+          <div className="bg-[#111827] p-8 rounded-xl border border-gray-800">
+
+            <h3 className="text-2xl font-semibold mb-4">
+              Bootcamp Fee
+            </h3>
+
+            <p className="text-2xl font-bold text-green-400 mb-2">
+              ₹3,999 Early Cohort Price
+            </p>
+
+            <p className="text-gray-400 text-sm mb-6">
+              Regular price ₹14,999
+            </p>
+
+            <p className="mb-3 font-semibold">
+              Includes:
+            </p>
+
+            <ul className="list-disc ml-6 space-y-2 text-gray-300">
+
+              <li>4 Week AI / ML Engineering Bootcamp</li>
+              <li>Cloud AI development environment</li>
+              <li>Team capstone project collaboration</li>
+              <li>Real-world GitHub workflow</li>
+
+            </ul>
 
           </div>
 
