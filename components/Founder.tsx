@@ -26,7 +26,7 @@ export default function Founder() {
 
             <p className="text-lg text-gray-300 mb-6">
               Hi, I’m <span className="font-semibold text-white">Ashish Chaudhary</span>, 
-              founder of <span className="text-purple-400 font-semibold">CookieCloud Labs</span>.
+              founder of <span className="text-purple-400 font-semibold">Cookiesensei</span>.
             </p>
 
             <p className="text-gray-400 mb-6 leading-relaxed">

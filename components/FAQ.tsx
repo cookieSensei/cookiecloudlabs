@@ -23,7 +23,7 @@ export default function FAQ() {
               How many hours per week is the bootcamp?
             </h3>
             <p className="text-gray-400">
-              Expect around 6–8 hours per week including live sessions, labs, and project work.
+              Expect around 14-28 hours per week including live sessions, labs, and project work.
             </p>
           </div>
 
@@ -50,7 +50,24 @@ export default function FAQ() {
               Who is this bootcamp for?
             </h3>
             <p className="text-gray-400">
-              College students and beginners who want to start building real AI projects and gain practical experience.
+              Non-tech college students and beginners who want to start building real AI projects and gain practical experience.
+            </p>
+          </div>
+
+          {/* Refund Policy */}
+          <div className="bg-[#111827] p-6 rounded-xl border border-gray-800">
+            <h3 className="font-semibold text-lg mb-2">
+              What is the refund policy?
+            </h3>
+            <p className="text-gray-400 mb-2">
+              Payments made for CookieCloud Labs programs are refundable within 7 days of purchase if the platform has not been used extensively.
+            </p>
+            <ul className="text-gray-400 list-disc pl-5 space-y-1">
+              <li>Refund requests must be made within 7 days.</li>
+              <li>Refunds will be processed within 5–7 business days.</li>
+            </ul>
+            <p className="text-gray-400 mt-2">
+              For refund requests, contact: <span className="text-white">ashishchaudhary62@gmail.com</span>
             </p>
           </div>
 
