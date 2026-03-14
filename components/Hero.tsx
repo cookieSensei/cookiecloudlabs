@@ -41,8 +41,33 @@ export default function Hero() {
           >
           Apply for the Cohort
           </a>
+  
+  
+  </div>
 
-      </div>
+         
+      {/* Scroll Arrow */}
+      <a
+        href="#capstone"
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-10 h-10 text-white opacity-80 hover:opacity-100 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </a>
+
+
     </section>
   );
 }

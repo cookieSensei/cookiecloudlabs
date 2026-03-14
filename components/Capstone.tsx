@@ -1,6 +1,6 @@
 export default function Capstone() {
   return (
-    <section className="py-24 bg-[#0b1220] text-white">
+    <section id="capstone" className="py-24 bg-[#0b1220] text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         <h2 className="text-4xl font-bold mb-10">
