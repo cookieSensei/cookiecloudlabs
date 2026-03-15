@@ -22,13 +22,12 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 text-center">
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          Become an AI Engineer in 4 Weeks
+          Build AI Without Setup Headaches
         </h1>
 
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-          Learn Artificial Intelligence from scratch and build a real AI project.
-          <br />
-          Beginner friendly • Live cohort program • Personal cloud AI lab • Only 6 students per cohort
+          Stop fighting installations. Start building real AI systems in the cloud.
+          
         </p>
 
         <a
