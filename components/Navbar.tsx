@@ -3,18 +3,20 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import Gallery from "@/components/Gallery";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   const isHome = pathname === "/";
-  const linkClass = (path: string) =>
-  `transition hover:text-blue-400 ${
-    pathname === path ? "text-blue-400 font-semibold" : ""
-  }`;
 
+  const linkClass = (path: string) =>
+    `transition hover:text-blue-400 ${
+      pathname === path ? "text-blue-400 font-semibold" : ""
+    }`;
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -27,45 +29,58 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const openGallery = () => {
+    setMenuOpen(false);
+    setGalleryOpen(true);
+  };
+
   const NavLinks = () => (
-  <>
-    {!isHome && (
-      <Link href="/" className="hover:text-blue-400 transition">
-        Home
+    <>
+      {!isHome && (
+        <Link href="/" className="hover:text-blue-400 transition">
+          Home
+        </Link>
+      )}
+
+      <Link href="/about" className={linkClass("/about")}>
+        About
       </Link>
-    )}
 
-    <Link href="/about" className={linkClass("/about")}>
-      About
-    </Link>
+      <Link href="/curriculum" className={linkClass("/curriculum")}>
+        Curriculum
+      </Link>
 
-    <Link href="/curriculum" className={linkClass("/curriculum")}>
-      Curriculum
-    </Link>
+      <Link href="/founder" className={linkClass("/founder")}>
+        Founder
+      </Link>
 
-    <Link href="/founder" className={linkClass("/founder")}>
-      Founder
-    </Link>
+      <Link href="/faq" className={linkClass("/faq")}>
+        FAQ
+      </Link>
 
-    <Link href="/faq" className={linkClass("/faq")}>
-      FAQ
-    </Link>
+      {/* Gallery Button */}
+      <button
+        onClick={openGallery}
+        className="hover:text-blue-400 transition"
+      >
+        Gallery
+      </button>
 
-    <Link
-      href="/enroll"
-      className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold"
-    >
-      Enroll
-    </Link>
+      <Link
+        href="/enroll"
+        className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold"
+      >
+        Enroll
+      </Link>
 
-    <Link
-      href="https://code.cookiesensei.com"
-      className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white"
-    >
-      Launch Lab
-    </Link>
-  </>
-);
+      <Link
+        href="https://code.cookiesensei.com"
+        className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white"
+      >
+        Launch Lab
+      </Link>
+    </>
+  );
 
   return (
     <>
@@ -150,8 +165,36 @@ export default function Navbar() {
             FAQ
           </Link>
 
+          {/* Mobile Gallery */}
+          <button
+            onClick={openGallery}
+            className="text-lg text-left hover:text-blue-400 transition"
+          >
+            Gallery
+          </button>
+
+          <Link
+            href="/enroll"
+            onClick={() => setMenuOpen(false)}
+            className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold w-fit"
+          >
+            Enroll
+          </Link>
+
+          <Link
+            href="https://code.cookiesensei.com"
+            onClick={() => setMenuOpen(false)}
+            className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white w-fit"
+          >
+            Launch Lab
+          </Link>
+
         </div>
       </div>
+
+      {/* Gallery Modal */}
+      <Gallery open={galleryOpen} onClose={() => setGalleryOpen(false)} />
+
     </>
   );
 }
