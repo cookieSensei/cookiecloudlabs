@@ -20,11 +20,12 @@ export default function Home() {
   return (
     <>
     <Hero />
+    <Comparison />
     <WhatYouBuild />
     <ToolsGrid />
     <WhyDifferent />
     <Projects />
-    <Comparison />
+    
     <GithubSection />
     <Internship />
     <Audience />
