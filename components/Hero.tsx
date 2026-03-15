@@ -55,11 +55,13 @@ export default function Hero() {
 
         {/* Scroll Arrow */}
         <div className="mt-10 flex justify-center">
-          <a href="#capstone" className="animate-bounce">
-
+          <a
+            href="#comparison"
+            className="flex justify-center mt-10 animate-bounce cursor-pointer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10 text-white opacity-90 hover:opacity-100 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+              className="w-8 h-8 text-white opacity-80 hover:opacity-100"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -71,7 +73,6 @@ export default function Hero() {
                 d="M19 9l-7 7-7-7"
               />
             </svg>
-
           </a>
         </div>
 

@@ -10,10 +10,9 @@ export default function Comparison() {
   ]
 
   return (
-    <section className="py-24 px-6 bg-[#020C2B] text-white">
+    <section id="comparison" className="py-24 px-6 text-white">
       <div className="max-w-5xl mx-auto">
 
-        {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           Built for Real AI Engineering
         </h2>
@@ -22,37 +21,28 @@ export default function Comparison() {
           Colab is great for experiments. CookieCloud is built for engineers.
         </p>
 
-        {/* Table */}
-        <div className="overflow-x-auto rounded-xl border border-slate-800">
+        <div className="overflow-x-auto rounded-xl border border-white/10">
           <table className="w-full">
 
-            {/* Header */}
-            <thead className="bg-slate-900">
+            <thead className="bg-white/5">
               <tr>
-                <th className="text-left p-4 font-semibold text-gray-300">
-                  Feature
-                </th>
-
-                <th className="text-center p-4 font-semibold text-green-400">
+                <th className="text-left p-4 text-gray-300">Feature</th>
+                <th className="text-center p-4 text-green-400 font-semibold">
                   CookieCloud
                 </th>
-
-                <th className="text-center p-4 font-semibold text-gray-300">
+                <th className="text-center p-4 text-gray-400">
                   Google Colab
                 </th>
               </tr>
             </thead>
 
-            {/* Rows */}
             <tbody>
               {rows.map((row, index) => (
                 <tr
                   key={index}
-                  className="border-t border-slate-800 hover:bg-slate-900/40 transition"
+                  className="border-t border-white/10 hover:bg-white/5"
                 >
-                  <td className="p-4 text-gray-300">
-                    {row.feature}
-                  </td>
+                  <td className="p-4 text-gray-300">{row.feature}</td>
 
                   <td className="p-4 text-center text-green-400 font-semibold">
                     {row.cookiecloud}
@@ -68,7 +58,6 @@ export default function Comparison() {
           </table>
         </div>
 
-        {/* Positioning */}
         <div className="mt-12 text-center">
           <p className="text-xl font-semibold text-green-400">
             “Colab is for experiments. CookieCloud is for engineers.”
