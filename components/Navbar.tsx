@@ -122,6 +122,14 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/curriculum"
+            onClick={() => setMenuOpen(false)}
+            className="text-lg hover:text-blue-400"
+          >
+            Curriculum
+          </Link>
+
+          <Link
             href="/founder"
             onClick={() => setMenuOpen(false)}
             className="text-lg hover:text-blue-400"
