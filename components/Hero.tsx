@@ -29,13 +29,29 @@ export default function Hero() {
           Stop fighting installations. Start building real AI systems in the cloud.
           
         </p>
+      
 
+
+
+
+
+        <div className="mt-8 flex justify-center gap-4">
         <a
           href="/enroll"
-          className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-lg text-lg transition"
+          className="bg-blue-600 px-6 py-3 rounded-lg font-semibold"
         >
-          Apply for the Cohort
+          Enroll Now
         </a>
+
+        <a
+          href="/curriculum"
+          className="border border-gray-600 px-6 py-3 rounded-lg"
+        >
+          View Curriculum
+        </a>
+      </div>
+
+      
 
         {/* Scroll Arrow */}
         <div className="mt-10 flex justify-center">
@@ -62,5 +78,8 @@ export default function Hero() {
       </div>
 
     </section>
+
+    
+
   );
 }

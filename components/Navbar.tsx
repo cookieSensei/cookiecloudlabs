@@ -23,40 +23,44 @@ export default function Navbar() {
   }, []);
 
   const NavLinks = () => (
-    <>
-      {!isHome && (
-        <Link href="/" className="hover:text-blue-400 transition">
-          Home
-        </Link>
-      )}
-
-      <Link href="/about" className="hover:text-blue-400 transition">
-        About
+  <>
+    {!isHome && (
+      <Link href="/" className="hover:text-blue-400 transition">
+        Home
       </Link>
+    )}
 
-      <Link href="/founder" className="hover:text-blue-400 transition">
-        Founder
-      </Link>
+    <Link href="/about" className="hover:text-blue-400 transition">
+      About
+    </Link>
 
-      <Link href="/faq" className="hover:text-blue-400 transition">
-        FAQ
-      </Link>
+    <Link href="/curriculum" className="hover:text-blue-400 transition">
+      Curriculum
+    </Link>
 
-      <Link
-        href="/enroll"
-        className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold"
-      >
-        Enroll
-      </Link>
+    <Link href="/founder" className="hover:text-blue-400 transition">
+      Founder
+    </Link>
 
-      <Link
-        href="https://code.cookiesensei.com"
-        className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white"
-      >
-        Launch Lab
-      </Link>
-    </>
-  );
+    <Link href="/faq" className="hover:text-blue-400 transition">
+      FAQ
+    </Link>
+
+    <Link
+      href="/enroll"
+      className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold"
+    >
+      Enroll
+    </Link>
+
+    <Link
+      href="https://code.cookiesensei.com"
+      className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white"
+    >
+      Launch Lab
+    </Link>
+  </>
+);
 
   return (
     <>

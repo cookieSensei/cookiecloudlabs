@@ -5,23 +5,31 @@ import Internship from "@/components/Internship";
 // import Founder from "@/components/Founder";
 // import BootcampTimeline from "@/components/BootcampTimeline";
 // import CloudLabs from "@/components/CloudLabs";
-import Capstone from "@/components/Capstone"
+import Capstone from "@/components/Projects"
 import Audience from "@/components/Audience"
 import CTA from "@/components/CTA"
 import Comparison from "@/components/Comparison"
 // import FAQ from "@/components/FAQ"
-
+import WhyDifferent from "@/components/WhyDifferent";
+import Projects from "@/components/Projects";
+import ToolsGrid from "@/components/ToolsGrid";
+import WhatYouBuild from "@/components/WhatYouBuild";
+import GithubSection from "@/components/GithubSection";
 
 export default function Home() {
   return (
     <>
     <Hero />
-    <Capstone />
+    <WhatYouBuild />
+    <ToolsGrid />
+    <WhyDifferent />
+    <Projects />
     <Comparison />
+    <GithubSection />
     <Internship />
     <Audience />
-    {/* <Founder /> */}
-    {/* <FAQ /> */}
+
+
     <CTA />
     </>
   );
