@@ -5,7 +5,7 @@ import BackToTop from "@/components/BackToTop";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "CookieCloud Labs",
+  title: "CookieSensei",
   description: "Build AI Without Setup Headaches",
 };
 
