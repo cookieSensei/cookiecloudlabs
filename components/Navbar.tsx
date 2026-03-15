@@ -10,6 +10,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isHome = pathname === "/";
+  const linkClass = (path: string) =>
+  `transition hover:text-blue-400 ${
+    pathname === path ? "text-blue-400 font-semibold" : ""
+  }`;
+
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -30,19 +35,19 @@ export default function Navbar() {
       </Link>
     )}
 
-    <Link href="/about" className="hover:text-blue-400 transition">
+    <Link href="/about" className={linkClass("/about")}>
       About
     </Link>
 
-    <Link href="/curriculum" className="hover:text-blue-400 transition">
+    <Link href="/curriculum" className={linkClass("/curriculum")}>
       Curriculum
     </Link>
 
-    <Link href="/founder" className="hover:text-blue-400 transition">
+    <Link href="/founder" className={linkClass("/founder")}>
       Founder
     </Link>
 
-    <Link href="/faq" className="hover:text-blue-400 transition">
+    <Link href="/faq" className={linkClass("/faq")}>
       FAQ
     </Link>
 
@@ -107,7 +112,7 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={() => setMenuOpen(false)}
-              className="text-lg hover:text-blue-400"
+              className={`text-lg ${linkClass("/")}`}
             >
               Home
             </Link>
@@ -116,7 +121,7 @@ export default function Navbar() {
           <Link
             href="/about"
             onClick={() => setMenuOpen(false)}
-            className="text-lg hover:text-blue-400"
+            className={`text-lg ${linkClass("/about")}`}
           >
             About
           </Link>
@@ -124,7 +129,7 @@ export default function Navbar() {
           <Link
             href="/curriculum"
             onClick={() => setMenuOpen(false)}
-            className="text-lg hover:text-blue-400"
+            className={`text-lg ${linkClass("/curriculum")}`}
           >
             Curriculum
           </Link>
@@ -132,7 +137,7 @@ export default function Navbar() {
           <Link
             href="/founder"
             onClick={() => setMenuOpen(false)}
-            className="text-lg hover:text-blue-400"
+            className={`text-lg ${linkClass("/founder")}`}
           >
             Founder
           </Link>
@@ -140,25 +145,9 @@ export default function Navbar() {
           <Link
             href="/faq"
             onClick={() => setMenuOpen(false)}
-            className="text-lg hover:text-blue-400"
+            className={`text-lg ${linkClass("/faq")}`}
           >
             FAQ
-          </Link>
-
-          <Link
-            href="/enroll"
-            onClick={() => setMenuOpen(false)}
-            className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold text-center"
-          >
-            Enroll
-          </Link>
-
-          <Link
-            href="https://code.cookiesensei.com"
-            onClick={() => setMenuOpen(false)}
-            className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white text-center"
-          >
-            Launch Lab
           </Link>
 
         </div>
