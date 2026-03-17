@@ -50,9 +50,9 @@ export default function Navbar() {
         Curriculum
       </Link>
 
-      <Link href="/founder" className={linkClass("/founder")}>
+      {/* <Link href="/founder" className={linkClass("/founder")}>
         Founder
-      </Link>
+      </Link> */}
 
       <Link href="/faq" className={linkClass("/faq")}>
         FAQ

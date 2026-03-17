@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Founder from "@/components/Founder";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -30,13 +30,6 @@ export default function AboutPage() {
           >
             Start Learning
           </Link>
-
-          {/* <Link
-            href="/gallery"
-            className="border border-gray-600 px-6 py-3 rounded-xl"
-          >
-            Explore Lab Images
-          </Link> */}
         </div>
       </section>
 
@@ -111,23 +104,8 @@ export default function AboutPage() {
       </section>
 
       {/* FOUNDER */}
-      <section className="max-w-5xl mx-auto mb-24 flex flex-col md:flex-row items-center gap-10">
-        <Image
-          src="/founder.jpg"
-          alt="Founder"
-          width={160}
-          height={160}
-          className="rounded-2xl"
-        />
-
-        <div>
-          <h2 className="text-3xl font-semibold mb-4">Meet the Founder</h2>
-          <p className="text-gray-300">
-            Ashish Chaudhary built CookieSensei after seeing students spend more
-            time fixing environments than actually learning. The mission is
-            simple: remove friction and help people build faster.
-          </p>
-        </div>
+      <section className="max-w-6xl mx-auto mb-24">
+        <Founder />
       </section>
 
       {/* CTA */}
