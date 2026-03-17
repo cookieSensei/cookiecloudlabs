@@ -149,13 +149,13 @@ export default function Navbar() {
             Curriculum
           </Link>
 
-          <Link
+          {/* <Link
             href="/founder"
             onClick={() => setMenuOpen(false)}
             className={`text-lg ${linkClass("/founder")}`}
           >
             Founder
-          </Link>
+          </Link> */}
 
           <Link
             href="/faq"
