@@ -18,7 +18,7 @@ export default function Comparison() {
         </h2>
 
         <p className="text-center text-gray-400 mb-12">
-          Colab is great for experiments. CookieCloud is built for engineers.
+          Colab is great for experiments. CookieCloud Labs is built for engineers.
         </p>
 
         <div className="overflow-x-auto rounded-xl border border-white/10">
@@ -28,7 +28,7 @@ export default function Comparison() {
               <tr>
                 <th className="text-left p-4 text-gray-300">Feature</th>
                 <th className="text-center p-4 text-green-400 font-semibold">
-                  CookieCloud
+                  CookieCloud Labs
                 </th>
                 <th className="text-center p-4 text-gray-400">
                   Google Colab
@@ -60,7 +60,7 @@ export default function Comparison() {
 
         <div className="mt-12 text-center">
           <p className="text-xl font-semibold text-green-400">
-            “Colab is for experiments. CookieCloud is for engineers.”
+            “Colab is for experiments. CookieCloud Labs is for engineers.”
           </p>
         </div>
 
