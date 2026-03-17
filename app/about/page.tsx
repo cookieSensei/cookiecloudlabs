@@ -1,50 +1,148 @@
-export default function About() {
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+export default function AboutPage() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-20">
+    <main className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white px-6 py-12">
 
-      <h1 className="text-3xl font-bold mb-6">
-        About CookieSensei
-      </h1>
+      {/* HERO */}
+      <section className="max-w-5xl mx-auto text-center mb-24">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl font-bold mb-6 leading-tight"
+        >
+          Learn AI by Building — Not Struggling
+        </motion.h1>
 
-      <p className="text-gray-300 mb-6">
-        CookieSensei was created to remove one of the biggest barriers students
-        face when learning Artificial Intelligence — setting up the development
-        environment.
-      </p>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+          CookieSensei removes the friction of setup so you can focus on what
+          actually matters: building real AI projects.
+        </p>
 
-      <p className="text-gray-300 mb-6">
-        Many students struggle with installing libraries, fixing dependency
-        issues, and running heavy AI workloads on limited laptops. Instead of
-        focusing on building real AI systems, they spend hours debugging
-        environment problems.
-      </p>
+        <div className="flex justify-center gap-4">
+          <Link
+            href="/"
+            className="bg-white text-black px-6 py-3 rounded-xl font-medium"
+          >
+            Start Learning
+          </Link>
 
-      <p className="text-gray-300 mb-6">
-        CookieSensei solves this by providing a cloud-based AI development
-        environment where students can start coding immediately in their
-        browser.
-      </p>
+          {/* <Link
+            href="/gallery"
+            className="border border-gray-600 px-6 py-3 rounded-xl"
+          >
+            Explore Lab Images
+          </Link> */}
+        </div>
+      </section>
 
-      <h2 className="text-xl font-semibold mt-10 mb-4">
-        What We Offer
-      </h2>
+      {/* SOCIAL PROOF */}
+      <section className="max-w-4xl mx-auto mb-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {["100+ Students", "50+ Projects", "10+ Tools", "0 Setup"].map(
+          (item, i) => (
+            <div key={i} className="bg-zinc-800 rounded-xl p-6">
+              <p className="font-semibold">{item}</p>
+            </div>
+          )
+        )}
+      </section>
 
-      <ul className="list-disc ml-6 text-gray-300 space-y-2">
-        <li>Cloud AI development environment</li>
-        <li>AI / ML Engineering Bootcamp</li>
-        <li>Real-world project collaboration using GitHub</li>
-        <li>Hands-on capstone project development</li>
-      </ul>
+      {/* PROBLEM */}
+      <section className="max-w-4xl mx-auto mb-20">
+        <h2 className="text-3xl font-semibold mb-6">The Problem</h2>
 
-      <h2 className="text-xl font-semibold mt-10 mb-4">
-        Founder
-      </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            "Python installs break",
+            "Library conflicts waste hours",
+            "ML models crash your laptop",
+            "You never actually start building",
+          ].map((item, i) => (
+            <div key={i} className="bg-zinc-800 p-6 rounded-xl">
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <p className="text-gray-300">
-        CookieSensei was founded by Ashish Chaudhary, who built the platform
-        after observing how many students struggle with infrastructure instead
-        of focusing on learning AI.
-      </p>
+      {/* SOLUTION */}
+      <section className="max-w-4xl mx-auto mb-20">
+        <h2 className="text-3xl font-semibold mb-6">Our Solution</h2>
+
+        <p className="text-gray-300 text-lg">
+          A fully configured cloud AI workspace that works instantly — so you
+          can skip setup and start building from day one.
+        </p>
+      </section>
+
+      {/* FEATURES */}
+      <section className="max-w-5xl mx-auto mb-20 grid md:grid-cols-2 gap-8">
+        {[
+          "Start coding in minutes",
+          "Build real-world AI projects",
+          "Use GitHub like real devs",
+          "Graduate with a portfolio",
+        ].map((item, i) => (
+          <div key={i} className="bg-zinc-800 p-6 rounded-2xl">
+            <p className="font-medium">{item}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* DIFFERENT */}
+      <section className="max-w-4xl mx-auto mb-20">
+        <h2 className="text-3xl font-semibold mb-6">Why We’re Different</h2>
+
+        <div className="space-y-4">
+          <div className="bg-zinc-800 p-6 rounded-xl">
+            Most platforms teach — we make you build
+          </div>
+          <div className="bg-zinc-800 p-6 rounded-xl">
+            No theory overload — only practical work
+          </div>
+          <div className="bg-zinc-800 p-6 rounded-xl">
+            Real tools, real workflow, real outcomes
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDER */}
+      <section className="max-w-5xl mx-auto mb-24 flex flex-col md:flex-row items-center gap-10">
+        <Image
+          src="/founder.jpg"
+          alt="Founder"
+          width={160}
+          height={160}
+          className="rounded-2xl"
+        />
+
+        <div>
+          <h2 className="text-3xl font-semibold mb-4">Meet the Founder</h2>
+          <p className="text-gray-300">
+            Ashish Chaudhary built CookieSensei after seeing students spend more
+            time fixing environments than actually learning. The mission is
+            simple: remove friction and help people build faster.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          Ready to Start Building AI?
+        </h2>
+
+        <Link
+          href="/"
+          className="bg-white text-black px-8 py-4 rounded-xl font-semibold"
+        >
+          Get Started Now
+        </Link>
+      </section>
 
     </main>
   );
