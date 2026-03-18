@@ -22,34 +22,38 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 text-center">
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          Build AI Without Setup Headaches
+          Don’t Learn AI Alone.
+          <br />
+          Build It Live With Us.
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-          Stop fighting installations. Start building real AI systems in the cloud.
-          
+        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6">
+          A 4-week live cohort where we sit with you and help you build real AI projects—step by step.
         </p>
-      
 
+        {/* Differentiation */}
+        <div className="text-gray-400 text-sm md:text-base mb-8 space-y-2">
+          <p>✔ No setup. Cloud lab ready from day 1</p>
+          <p>✔ Small cohorts (max 6 people)</p>
+          <p>✔ Live guidance + accountability</p>
+        </div>
 
-
-
-
+        {/* CTA */}
         <div className="mt-8 flex justify-center gap-4">
-        <a
-          href="/enroll"
-          className="bg-blue-600 px-6 py-3 rounded-lg font-semibold"
-        >
-          Enroll Now
-        </a>
+          <a
+            href="/enroll"
+            className="bg-blue-600 px-6 py-3 rounded-lg font-semibold"
+          >
+            Join Next Cohort
+          </a>
 
-        <a
-          href="/curriculum"
-          className="border border-gray-600 px-6 py-3 rounded-lg"
-        >
-          View Curriculum
-        </a>
-      </div>
+          <a
+            href="/curriculum"
+            className="border border-gray-600 px-6 py-3 rounded-lg"
+          >
+            See What You’ll Build
+          </a>
+        </div>
 
       
 
