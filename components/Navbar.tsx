@@ -50,19 +50,20 @@ export default function Navbar() {
         Curriculum
       </Link>
 
-      {/* <Link href="/founder" className={linkClass("/founder")}>
-        Founder
-      </Link> */}
+      {/* 🔥 NEW WORKSHOP LINK */}
+      <Link
+        href="/workshop"
+        className="text-orange-400 font-semibold hover:text-orange-300 transition"
+      >
+        🔥 2-Hour AI Workshop
+      </Link>
 
       <Link href="/faq" className={linkClass("/faq")}>
         FAQ
       </Link>
 
       {/* Gallery Button */}
-      <button
-        onClick={openGallery}
-        className="hover:text-blue-400 transition"
-      >
+      <button onClick={openGallery} className="hover:text-blue-400 transition">
         Gallery
       </button>
 
@@ -149,13 +150,14 @@ export default function Navbar() {
             Curriculum
           </Link>
 
-          {/* <Link
-            href="/founder"
+          {/* 🔥 WORKSHOP MOBILE */}
+          <Link
+            href="/workshop"
             onClick={() => setMenuOpen(false)}
-            className={`text-lg ${linkClass("/founder")}`}
+            className="text-lg text-orange-400 font-semibold"
           >
-            Founder
-          </Link> */}
+            🔥 2-Hour AI Workshop
+          </Link>
 
           <Link
             href="/faq"
@@ -165,7 +167,6 @@ export default function Navbar() {
             FAQ
           </Link>
 
-          {/* Mobile Gallery */}
           <button
             onClick={openGallery}
             className="text-lg text-left hover:text-blue-400 transition"
@@ -192,9 +193,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Gallery Modal */}
       <Gallery open={galleryOpen} onClose={() => setGalleryOpen(false)} />
-
     </>
   );
 }
