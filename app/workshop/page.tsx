@@ -103,7 +103,7 @@ export default function WorkshopPage() {
         </p>
 
         <Link
-          href="/enroll?source=workshop"
+          href="/workshop/apply"
           className="inline-block px-10 py-4 bg-orange-500 hover:bg-orange-400 text-black font-bold rounded-xl text-lg"
         >
           🚀 Reserve Your Seat
