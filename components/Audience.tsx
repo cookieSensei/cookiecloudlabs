@@ -1,6 +1,6 @@
 export default function Audience() {
   return (
-    <section className="py-24 bg-black text-white">
+    <section className="py-24 text-white">
 
       <div className="max-w-5xl mx-auto px-6">
 
