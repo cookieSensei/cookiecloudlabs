@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 text-center">
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          Become an AI Engineer by Building Real Production Projects — Not Watching Tutorials
+          Learn AI Engineering by Building Real Production Systems — Not Watching Tutorials
         </h1>
 
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6">
