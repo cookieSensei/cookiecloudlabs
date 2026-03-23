@@ -22,13 +22,11 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 text-center">
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          Don’t Learn AI Alone.
-          <br />
-          Build It Live With Us.
+          Become an AI Engineer by Building Real Production Projects — Not Watching Tutorials
         </h1>
 
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6">
-          A 4-week live cohort where we sit with you and help you build real AI projects—step by step.
+          A 4-week hands-on bootcamp where you ship real AI systems using Git, PRs, and team workflows — just like actual engineers.
         </p>
 
         {/* Differentiation */}

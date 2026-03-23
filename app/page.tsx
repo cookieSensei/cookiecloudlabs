@@ -15,20 +15,28 @@ import Projects from "@/components/Projects";
 import ToolsGrid from "@/components/ToolsGrid";
 import WhatYouBuild from "@/components/WhatYouBuild";
 import GithubSection from "@/components/GithubSection";
+import Pain from "@/components/Pain";
+import Outcome from "@/components/Outcome";
+
 
 export default function Home() {
   return (
     <>
     <Hero />
+    <Pain />
     <Comparison />
-    <WhatYouBuild />
-    <ToolsGrid />
     <WhyDifferent />
+    
+    {/* <WhatYouBuild /> */}
+    {/* <ToolsGrid /> */}
+    
     <Projects />
     
     <GithubSection />
-    <Internship />
+    
+    <Outcome />
     <Audience />
+    <Internship />
 
 
     <CTA />
