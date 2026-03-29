@@ -22,18 +22,19 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 text-center">
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          Learn AI Engineering by Building Real Production Systems — Not Watching Tutorials
+          Build Real AI Systems in the Cloud — No Setup, Just Shipping
         </h1>
 
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-6">
-          A 4-week hands-on bootcamp where you ship real AI systems using Git, PRs, and team workflows — just like actual engineers.
+          Train like an engineer from day one using pre-configured cloud labs, real repos, and production workflows.
         </p>
 
         {/* Differentiation */}
         <div className="text-gray-400 text-sm md:text-base mb-8 space-y-2">
-          <p>✔ No setup. Cloud lab ready from day 1</p>
+          <p>✔ Your own cloud dev environment (ready in minutes)</p>
           <p>✔ Small cohorts (max 6 people)</p>
           <p>✔ Live guidance + accountability</p>
+          <p>✔ Work with Git, PRs, and team workflows</p>
         </div>
 
         {/* CTA */}
@@ -42,14 +43,14 @@ export default function Hero() {
             href="/enroll"
             className="bg-blue-600 px-6 py-3 rounded-lg font-semibold"
           >
-            Join Next Cohort
+            Start Building in the Cloud
           </a>
 
           <a
             href="/curriculum"
             className="border border-gray-600 px-6 py-3 rounded-lg"
           >
-            See What You’ll Build
+            Explore Real Projects
           </a>
         </div>
 

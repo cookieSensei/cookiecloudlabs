@@ -17,13 +17,14 @@ import WhatYouBuild from "@/components/WhatYouBuild";
 import GithubSection from "@/components/GithubSection";
 import Pain from "@/components/Pain";
 import Outcome from "@/components/Outcome";
-
+import CloudLabs from "@/components/CloudLabs";
 
 export default function Home() {
   return (
     <>
     <Hero />
     <Pain />
+    <CloudLabs />
     <Comparison />
     <WhyDifferent />
     
