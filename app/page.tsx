@@ -18,6 +18,7 @@ import GithubSection from "@/components/GithubSection";
 import Pain from "@/components/Pain";
 import Outcome from "@/components/Outcome";
 import CloudLabs from "@/components/CloudLabs";
+import HowItWorks from "@/components/HowItWorks";
 
 export default function Home() {
   return (
@@ -26,10 +27,8 @@ export default function Home() {
     <Pain />
     <CloudLabs />
     <Comparison />
+    <HowItWorks />
     <WhyDifferent />
-    
-    {/* <WhatYouBuild /> */}
-    {/* <ToolsGrid /> */}
     
     <Projects />
     

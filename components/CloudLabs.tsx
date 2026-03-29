@@ -16,7 +16,7 @@ export default function CloudLabs() {
       {/* Feature Grid */}
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
+        <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl">
           <h3 className="font-semibold text-lg mb-2">
             ⚡ Instant Setup
           </h3>
@@ -26,7 +26,7 @@ export default function CloudLabs() {
           </p>
         </div>
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
+        <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl">
           <h3 className="font-semibold text-lg mb-2">
             🌐 Fully Browser-Based
           </h3>
@@ -35,7 +35,7 @@ export default function CloudLabs() {
           </p>
         </div>
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
+        <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl">
           <h3 className="font-semibold text-lg mb-2">
             🤖 Production AI Stack
           </h3>
@@ -49,7 +49,7 @@ export default function CloudLabs() {
       {/* Contrast Section */}
       <div className="mt-20 max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800">
+        <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl">
           <h4 className="text-red-400 font-semibold mb-3">
             ❌ Typical Learning
           </h4>
@@ -61,7 +61,7 @@ export default function CloudLabs() {
           </ul>
         </div>
 
-        <div className="bg-zinc-900 p-6 rounded-xl border border-green-800">
+        <div className="bg-gray-900 border border-gray-800 p-6 rounded-xl">
           <h4 className="text-green-400 font-semibold mb-3">
             ✅ CookieSensei Cloud Labs
           </h4>
