@@ -9,6 +9,10 @@ export default function Pain() {
         <p>❌ You watch tutorials → but can’t build anything yourself</p>
         <p>❌ You learn theory → but don’t know how real engineers work</p>
         <p>❌ You install libraries for hours → and still get errors</p>
+        <p>❌ You try setting up CUDA → your laptop crashes or overheats</p>
+        <p>❌ Your system isn’t powerful enough → models don’t even run</p>
+        <p>❌ You waste days fixing environment issues instead of learning AI</p>
+        <p>❌ You depend on Google Colab → sessions disconnect, progress lost</p>
         <p>❌ You finish courses → but your GitHub is empty</p>
 
         <p className="font-semibold mt-6">
