@@ -16,25 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        
 
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18048154398"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-18048154398');
-          `}
-        </Script>
-
-
-        
-      </head>
       <body className="bg-slate-950 text-white overflow-x-hidden">
 
         <Script
