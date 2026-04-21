@@ -11,21 +11,25 @@ export default function EnrollPage() {
   const [college, setCollege] = useState("");
   const [degree, setDegree] = useState("");
 
+  // 🛑 BOT TRAP (honeypot)
+  const [company, setCompany] = useState("");
+
   async function sendToSheet(type: string) {
 
     await fetch("https://script.google.com/macros/s/AKfycby5W3sHm4wtZBx92M7sT7mJQMa9BwPDHL8PwVRJNiRNJhhekMk0-IE5BMPKT-_tzd7uQw/exec", {
       method: "POST",
       mode: "no-cors",
       body: JSON.stringify({
-      name,
-      email,
-      phone,
-      college,
-      degree,
-      message,
-      type,
-      payment: type === "enrollment" ? "pending" : ""
-    }),
+        name,
+        email,
+        phone,
+        college,
+        degree,
+        message,
+        type,
+        payment: type === "enrollment" ? "pending" : "",
+        secret: "mysecret123" // 🔐 MUST match Google Script
+      }),
       headers: {
         "Content-Type": "application/json"
       }
@@ -33,9 +37,18 @@ export default function EnrollPage() {
 
   }
 
-  async function handleEnroll(e:any) {
+  async function handleEnroll(e: any) {
 
     e.preventDefault();
+
+    // 🛑 BOT BLOCK
+    if (company) return;
+
+    // ✅ BASIC VALIDATION
+    if (!name || !email || !phone || !college || !degree) {
+      alert("Please fill all required fields");
+      return;
+    }
 
     try {
 
@@ -79,6 +92,15 @@ export default function EnrollPage() {
 
   async function handleQuery() {
 
+    // 🛑 BOT BLOCK
+    if (company) return;
+
+    // ✅ BASIC VALIDATION
+    if (!name || !email) {
+      alert("Please enter your name and email");
+      return;
+    }
+
     try {
 
       await sendToSheet("query");
@@ -112,6 +134,14 @@ export default function EnrollPage() {
         className="flex flex-col gap-4"
       >
 
+        {/* 🛑 HONEYPOT FIELD (hidden from users) */}
+        <input
+          type="text"
+          value={company}
+          onChange={(e)=>setCompany(e.target.value)}
+          style={{ display: "none" }}
+        />
+
         <input
           type="text"
           placeholder="Full Name"
@@ -139,7 +169,6 @@ export default function EnrollPage() {
           className="p-3 rounded bg-slate-900 border border-slate-700"
         />
 
-
         <input
           type="text"
           placeholder="College Name"
@@ -156,13 +185,10 @@ export default function EnrollPage() {
           value={degree}
           onChange={(e)=>setDegree(e.target.value)}
           className="p-3 rounded bg-slate-900 border border-slate-700"
-/>
-
-
-
+        />
 
         <textarea
-          placeholder="Ask anything about the bootcamp, schedule, prerequisites..."
+          placeholder="Ask anything about the bootcamp..."
           value={message}
           onChange={(e)=>setMessage(e.target.value)}
           className="p-3 rounded bg-slate-900 border border-slate-700 min-h-[120px]"
