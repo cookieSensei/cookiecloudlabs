@@ -1,24 +1,48 @@
 export default function Pain() {
   return (
-    <section className="py-16 px-6 md:px-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Why Most AI Courses Don’t Work
+    <section className="py-20 px-6 md:px-20">
+
+      <h2 className="text-3xl md:text-5xl font-bold text-center">
+        What's Stopping You From Learning AI?
       </h2>
 
-      <div className="mt-10 max-w-3xl mx-auto text-lg text-white space-y-4">
-        <p>❌ You watch tutorials → but can’t build anything yourself</p>
-        <p>❌ You learn theory → but don’t know how real engineers work</p>
-        <p>❌ You install libraries for hours → and still get errors</p>
-        <p>❌ You try setting up CUDA → your laptop crashes or overheats</p>
-        <p>❌ Your system isn’t powerful enough → models don’t even run</p>
-        <p>❌ You waste days fixing environment issues instead of learning AI</p>
-        <p>❌ You depend on Google Colab → sessions disconnect, progress lost</p>
-        <p>❌ You finish courses → but your GitHub is empty</p>
+      <p className="mt-6 max-w-3xl mx-auto text-center text-gray-300 text-lg leading-relaxed">
+        If you've ever wanted to learn programming or Artificial Intelligence
+        but felt it wasn't meant for you, you're not alone.
+        Most beginners share the same concerns.
+      </p>
 
-        <p className="font-semibold mt-6">
-          So when it’s time for internships or jobs… you’re stuck.
-        </p>
+      <div className="mt-12 max-w-3xl mx-auto text-lg text-white space-y-5">
+
+        <p>❌ "I've never written code before."</p>
+
+        <p>❌ "I'm from MBA, BBA, Commerce or Arts. Can I really learn this?"</p>
+
+        <p>❌ "My laptop isn't powerful enough."</p>
+
+        <p>❌ "AI feels too difficult to understand."</p>
+
+        <p>❌ "I'm worried I'll get stuck and won't know what to do."</p>
+
+        <p>❌ "Everyone else seems ahead of me."</p>
+
       </div>
+
+      <div className="mt-12 max-w-4xl mx-auto bg-blue-600/10 border border-blue-500/30 rounded-xl p-8">
+
+        <h3 className="text-2xl font-semibold text-center mb-4">
+          That's exactly why CookieSensei exists.
+        </h3>
+
+        <p className="text-center text-gray-300 text-lg leading-relaxed">
+          You don't need a computer science degree to learn programming or AI.
+          You don't need prior experience.
+          You simply need curiosity, guidance, and a place where you can learn
+          without feeling overwhelmed.
+        </p>
+
+      </div>
+
     </section>
   );
 }
