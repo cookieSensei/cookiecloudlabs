@@ -2,8 +2,9 @@ import Hero from "@/components/Hero";
 import Pain from "@/components/Pain";
 import CloudLabs from "@/components/CloudLabs";
 import WhatYouBuild from "@/components/WhatYouBuild";
-import Audience from "@/components/Audience";
-import Internship from "@/components/Internship";
+import MeetInstructor from "@/components/MeetInstructor";
+import WhoLearns from "@/components/WhoLearns";
+import HowYouLearn from "@/components/HowYouLearn";
 import CTA from "@/components/CTA";
 
 export default function Home() {
@@ -13,8 +14,9 @@ export default function Home() {
       <Pain />
       <CloudLabs />
       <WhatYouBuild />
-      <Audience />
-      <Internship />
+      <MeetInstructor />
+      <WhoLearns />
+      <HowYouLearn />
       <CTA />
     </>
   );

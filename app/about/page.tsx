@@ -1,6 +1,6 @@
 "use client";
 
-import Founder from "@/components/Founder";
+import Founder from "@/components/MeetInstructor";
 import Link from "next/link";
 import { motion } from "framer-motion";
 

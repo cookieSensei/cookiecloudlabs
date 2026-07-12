@@ -46,14 +46,17 @@ export default function Navbar() {
         About
       </Link>
 
+      <Link href="/approach" className={linkClass("/approach")}>
+        Our Approach
+      </Link>
+
       <Link href="/curriculum" className={linkClass("/curriculum")}>
         Curriculum
       </Link>
 
-      {/* 🔥 NEW WORKSHOP LINK */}
       <Link
         href="/workshop"
-        className="text-orange-400 font-semibold hover:text-orange-300 transition"
+        className={`${linkClass("/workshop")} text-orange-400 font-semibold`}
       >
         🔥 2-Hour AI Workshop
       </Link>
@@ -62,7 +65,6 @@ export default function Navbar() {
         FAQ
       </Link>
 
-      {/* Gallery Button */}
       <button onClick={openGallery} className="hover:text-blue-400 transition">
         Gallery
       </button>
@@ -86,7 +88,6 @@ export default function Navbar() {
   return (
     <>
       <header className="w-full px-4 md:px-10 py-4 flex justify-between items-center sticky top-0 backdrop-blur bg-[#0b1220]/70 z-40">
-
         {/* Logo */}
         <Link href="/">
           <h1 className="text-lg md:text-xl font-bold cursor-pointer">
@@ -119,11 +120,11 @@ export default function Navbar() {
       {/* Mobile Sidebar */}
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 border-r border-slate-700 shadow-xl transform transition-transform duration-300 z-50 md:hidden
-        ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 border-r border-slate-700 shadow-xl transform transition-transform duration-300 z-50 md:hidden ${
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         <div className="p-6 flex flex-col gap-6 mt-10">
-
           {!isHome && (
             <Link
               href="/"
@@ -143,6 +144,14 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/approach"
+            onClick={() => setMenuOpen(false)}
+            className={`text-lg ${linkClass("/approach")}`}
+          >
+            Our Approach
+          </Link>
+
+          <Link
             href="/curriculum"
             onClick={() => setMenuOpen(false)}
             className={`text-lg ${linkClass("/curriculum")}`}
@@ -150,11 +159,12 @@ export default function Navbar() {
             Curriculum
           </Link>
 
-          {/* 🔥 WORKSHOP MOBILE */}
           <Link
             href="/workshop"
             onClick={() => setMenuOpen(false)}
-            className="text-lg text-orange-400 font-semibold"
+            className={`text-lg text-orange-400 font-semibold ${linkClass(
+              "/workshop"
+            )}`}
           >
             🔥 2-Hour AI Workshop
           </Link>
@@ -189,7 +199,6 @@ export default function Navbar() {
           >
             Launch Lab
           </Link>
-
         </div>
       </div>
 
