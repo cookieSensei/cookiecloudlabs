@@ -1,6 +1,9 @@
 export default function Pain() {
   return (
-    <section className="py-20 px-6 md:px-20">
+    <section
+      id="pain"
+      className="py-24 scroll-mt-24"
+    >
 
       <h2 className="text-3xl md:text-5xl font-bold text-center">
         What's Stopping You From Learning AI?
