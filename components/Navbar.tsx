@@ -54,11 +54,8 @@ export default function Navbar() {
         Curriculum
       </Link>
 
-      <Link
-        href="/workshop"
-        className={`${linkClass("/workshop")} text-orange-400 font-semibold`}
-      >
-        🔥 2-Hour AI Workshop
+      <Link href="/workshops" className={linkClass("/workshops")}>
+        Workshops
       </Link>
 
       <Link href="/faq" className={linkClass("/faq")}>
@@ -160,13 +157,11 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/workshop"
+            href="/workshops"
             onClick={() => setMenuOpen(false)}
-            className={`text-lg text-orange-400 font-semibold ${linkClass(
-              "/workshop"
-            )}`}
+            className={`text-lg ${linkClass("/workshops")}`}
           >
-            🔥 2-Hour AI Workshop
+            Workshops
           </Link>
 
           <Link
