@@ -1,21 +1,35 @@
-import Hero from "@/components/Hero";
-import Pain from "@/components/Pain";
-import CloudLabs from "@/components/CloudLabs";
-import WhatYouBuild from "@/components/WhatYouBuild";
-import WhoLearns from "@/components/WhoLearns";
-import HowYouLearn from "@/components/HowYouLearn";
-import CTA from "@/components/CTA";
+import Hero from "@/components/homepage/Hero";
+import AboutProgram from "@/components/homepage/WhatIsCookiesensei";
+import Program from "@/components/homepage/Program";
+import LearningPhases from "@/components/homepage/LearningPhases";
+import Approach from "@/components/homepage/Approach";
+import CloudLabs from "@/components/homepage/CloudLabs";
+import WhoItsFor from "@/components/homepage/WhoItsFor";
+import Workshop from "@/components/homepage/Workshop";
+import CTA from "@/components/homepage/CTA";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
+    <main className="bg-slate-950 text-white">
+
       <Hero />
-      <Pain />
+
+      <AboutProgram />
+
+      <Program />
+
+      <LearningPhases />
+
+      <Approach />
+
       <CloudLabs />
-      <WhatYouBuild />
-      <WhoLearns />
-      <HowYouLearn />
+
+      <WhoItsFor />
+
+      <Workshop />
+
       <CTA />
-    </>
+
+    </main>
   );
 }
