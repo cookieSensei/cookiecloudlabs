@@ -3,14 +3,12 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import Gallery from "@/components/Gallery";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [galleryOpen, setGalleryOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
 
+  const pathname = usePathname();
   const isHome = pathname === "/";
 
   const linkClass = (path: string) =>
@@ -20,57 +18,48 @@ export default function Navbar() {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
         setMenuOpen(false);
       }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const openGallery = () => {
-    setMenuOpen(false);
-    setGalleryOpen(true);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   const NavLinks = () => (
     <>
       {!isHome && (
-        <Link href="/" className="hover:text-blue-400 transition">
+        <Link href="/" scroll className="hover:text-blue-400 transition">
           Home
         </Link>
       )}
 
-      <Link href="/about" className={linkClass("/about")}>
+      <Link href="/about" scroll className={linkClass("/about")}>
         About
       </Link>
 
-      <Link href="/approach" className={linkClass("/approach")}>
+      <Link href="/approach" scroll className={linkClass("/approach")}>
         Our Approach
       </Link>
 
-      <Link href="/curriculum" className={linkClass("/curriculum")}>
+      <Link href="/curriculum" scroll className={linkClass("/curriculum")}>
         Curriculum
       </Link>
 
-      <Link href="/workshops" className={linkClass("/workshops")}>
+      <Link href="/workshops" scroll className={linkClass("/workshops")}>
         Workshops
       </Link>
 
-      <Link href="/faq" className={linkClass("/faq")}>
+      <Link href="/faq" scroll className={linkClass("/faq")}>
         FAQ
-      </Link>
-
-      <button onClick={openGallery} className="hover:text-blue-400 transition">
-        Gallery
-      </button>
-
-      <Link
-        href="/enroll"
-        className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold"
-      >
-        Enroll
       </Link>
 
       <Link
@@ -84,48 +73,44 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full px-4 md:px-10 py-4 flex justify-between items-center sticky top-0 backdrop-blur bg-[#0b1220]/70 z-40">
-        {/* Logo */}
-        <Link href="/">
-          <h1 className="text-lg md:text-xl font-bold cursor-pointer">
+      <header className="sticky top-0 z-40 flex w-full items-center justify-between bg-[#0b1220]/70 px-4 py-4 backdrop-blur md:px-10">
+        <Link href="/" scroll>
+          <h1 className="cursor-pointer text-lg font-bold md:text-xl">
             CookieSensei
           </h1>
         </Link>
 
-        {/* Desktop Navbar */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden items-center gap-6 md:flex">
           <NavLinks />
         </nav>
 
-        {/* Hamburger */}
         <button
-          className="md:hidden text-3xl z-50"
+          className="z-50 text-3xl md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? "✕" : "☰"}
         </button>
       </header>
 
-      {/* Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black/40 z-40 md:hidden"
-          onClick={() => setMenuOpen(false)}
+          className="fixed inset-0 z-40 bg-black/40 md:hidden"
+          onClick={closeMenu}
         />
       )}
 
-      {/* Mobile Sidebar */}
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 border-r border-slate-700 shadow-xl transform transition-transform duration-300 z-50 md:hidden ${
+        className={`fixed left-0 top-0 z-50 h-full w-64 transform border-r border-slate-700 bg-slate-900 shadow-xl transition-transform duration-300 md:hidden ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-6 flex flex-col gap-6 mt-10">
+        <div className="mt-10 flex flex-col gap-6 p-6">
           {!isHome && (
             <Link
               href="/"
-              onClick={() => setMenuOpen(false)}
+              scroll
+              onClick={closeMenu}
               className={`text-lg ${linkClass("/")}`}
             >
               Home
@@ -134,7 +119,8 @@ export default function Navbar() {
 
           <Link
             href="/about"
-            onClick={() => setMenuOpen(false)}
+            scroll
+            onClick={closeMenu}
             className={`text-lg ${linkClass("/about")}`}
           >
             About
@@ -142,7 +128,8 @@ export default function Navbar() {
 
           <Link
             href="/approach"
-            onClick={() => setMenuOpen(false)}
+            scroll
+            onClick={closeMenu}
             className={`text-lg ${linkClass("/approach")}`}
           >
             Our Approach
@@ -150,7 +137,8 @@ export default function Navbar() {
 
           <Link
             href="/curriculum"
-            onClick={() => setMenuOpen(false)}
+            scroll
+            onClick={closeMenu}
             className={`text-lg ${linkClass("/curriculum")}`}
           >
             Curriculum
@@ -158,7 +146,8 @@ export default function Navbar() {
 
           <Link
             href="/workshops"
-            onClick={() => setMenuOpen(false)}
+            scroll
+            onClick={closeMenu}
             className={`text-lg ${linkClass("/workshops")}`}
           >
             Workshops
@@ -166,38 +155,22 @@ export default function Navbar() {
 
           <Link
             href="/faq"
-            onClick={() => setMenuOpen(false)}
+            scroll
+            onClick={closeMenu}
             className={`text-lg ${linkClass("/faq")}`}
           >
             FAQ
           </Link>
 
-          <button
-            onClick={openGallery}
-            className="text-lg text-left hover:text-blue-400 transition"
-          >
-            Gallery
-          </button>
-
-          <Link
-            href="/enroll"
-            onClick={() => setMenuOpen(false)}
-            className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold w-fit"
-          >
-            Enroll
-          </Link>
-
           <Link
             href="https://code.cookiesensei.com"
-            onClick={() => setMenuOpen(false)}
-            className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white w-fit"
+            onClick={closeMenu}
+            className="w-fit rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 text-white"
           >
             Launch Lab
           </Link>
         </div>
       </div>
-
-      <Gallery open={galleryOpen} onClose={() => setGalleryOpen(false)} />
     </>
   );
 }
