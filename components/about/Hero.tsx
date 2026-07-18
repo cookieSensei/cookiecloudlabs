@@ -1,4 +1,5 @@
 "use client";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export default function Hero() {
   const scrollToStory = () => {
@@ -32,18 +33,11 @@ export default function Hero() {
       {/* Scroll Indicator */}
 
       <div className="absolute bottom-16 left-1/2 -translate-x-1/2">
-        <button
-            onClick={scrollToStory}
-            className="group flex flex-col items-center gap-1"
-            >
-            <span className="text-sm tracking-wide text-gray-500 transition-colors group-hover:text-gray-300">
-                Discover the story
-            </span>
+        <ScrollIndicator
+          text="Discover the Story"
+          targetId="story"
+        />
 
-            <span className="animate-bounce text-3xl text-blue-400">
-                ↓
-            </span>
-            </button>
       </div>
     </section>
   );

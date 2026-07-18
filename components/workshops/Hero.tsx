@@ -1,3 +1,4 @@
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 
 export default function Hero() {
@@ -30,20 +31,13 @@ export default function Hero() {
           </p>
         </div>
 
-        <a
-          href="#why-workshop"
-          className="mt-20 inline-flex flex-col items-center text-gray-500 transition hover:text-white"
-        >
 
-            
-          <p className="text-sm">
-            Discover the Workshop
-          </p>
+        <ScrollIndicator
+          text="Discover the Workshop"
+          targetId="why-workshop"
+        />
 
-          <div className="mt-2 animate-bounce text-3xl">
-            ↓
-          </div>
-        </a>
+
       </div>
     </section>
   );

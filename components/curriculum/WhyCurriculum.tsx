@@ -1,6 +1,6 @@
 export default function WhyCurriculum() {
   return (
-    <section className="py-32 px-6 border-t border-slate-800">
+    <section id="roadmap" className="py-32 px-6 border-t border-slate-800">
 
       <div className="w-[min(92vw,1200px)] mx-auto">
 

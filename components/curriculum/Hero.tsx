@@ -1,3 +1,6 @@
+import ScrollIndicator from "@/components/ScrollIndicator";
+
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6">
@@ -60,7 +63,10 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <div className="mt-20 animate-bounce text-gray-500 text-3xl">
-          ↓
+          <ScrollIndicator
+            text="Explore the Learning Journey"
+            targetId="roadmap"
+          />
         </div>
 
       </div>

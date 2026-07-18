@@ -1,4 +1,6 @@
 "use client";
+import ScrollIndicator from "@/components/ScrollIndicator";
+
 
 export default function Hero() {
   const scrollToSection = () => {
@@ -38,28 +40,11 @@ export default function Hero() {
 
         </div>
 
-        <button
-          onClick={scrollToSection}
-          className="mt-16 group flex flex-col items-center mx-auto"
-        >
-          <span className="text-sm tracking-wide text-slate-400 group-hover:text-white transition">
-            Explore the Program
-          </span>
+        <ScrollIndicator
+          text="Explore the Program"
+          targetId="what-is-cookiesensei"
+        />
 
-          <svg
-            className="w-8 h-8 mt-2 animate-bounce text-blue-400"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
 
       </div>
 
