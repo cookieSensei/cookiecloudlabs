@@ -29,11 +29,10 @@ export default function BackToTop() {
   if (!visible) return null;
 
   return (
-    <button
-      onClick={scrollToTop}
-      className="fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded-full shadow-lg z-50"
-    >
-      ↑
-    </button>
+<button
+  onClick={scrollToTop}
+  className="fixed bottom-6 right-6 bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg transition-colors duration-200 z-50">
+  ↑
+</button>
   );
 }

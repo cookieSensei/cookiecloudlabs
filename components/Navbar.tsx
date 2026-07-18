@@ -75,7 +75,7 @@ export default function Navbar() {
 
       <Link
         href="https://code.cookiesensei.com"
-        className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-white"
+        className="bg-blue-500 hover:bg-blue-600 transition px-4 py-2 rounded-lg text-white"
       >
         Launch Lab
       </Link>
