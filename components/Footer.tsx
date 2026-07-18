@@ -10,7 +10,7 @@ export default function Footer() {
       <Link href="/contact">Contact</Link>
 
       <div className="mt-4">
-        © 2026 CookieCloud Labs – Build. Learn. Contribute.
+        © 2026 CookieSensei Labs. Build. Learn. Contribute.
       </div>
 
     </footer>

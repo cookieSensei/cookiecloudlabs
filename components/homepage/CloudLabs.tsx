@@ -65,14 +65,7 @@ export default function CloudLabs() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              href="/cloud-labs"
-              className="inline-flex items-center rounded-xl border border-slate-700 px-8 py-4 font-semibold transition-all duration-300 hover:border-blue-500 hover:text-blue-400"
-            >
-              Learn About Cloud Labs
-            </Link>
-          </div>
+   
         </div>
       </div>
     </section>
