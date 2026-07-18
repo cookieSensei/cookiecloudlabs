@@ -12,9 +12,8 @@ export default function Mission() {
 
         {/* Mission Statement */}
 
-        <h2 className="max-w-4xl mx-auto font-bold leading-tight mb-12 text-[clamp(3rem,7vw,5.5rem)]">
-          Technology should empower people to solve meaningful real-world
-          problems.
+        <h2 className="max-w-3xl mx-auto font-bold leading-tight text-[clamp(2rem,4.5vw,3.5rem)] mb-12">
+          Technology should empower people to solve meaningful real-world problems.
         </h2>
 
         {/* Supporting Text */}

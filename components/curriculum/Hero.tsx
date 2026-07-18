@@ -15,11 +15,11 @@ export default function Hero() {
         {/* Hero Title */}
         <h1
           className="
-            w-[min(90vw,900px)]
+            max-w-3xl
             mx-auto
             font-bold
             leading-tight
-            text-[clamp(3rem,7vw,5.5rem)]
+            text-[clamp(2.5rem,6vw,4.5rem)]
           "
         >
           More Than

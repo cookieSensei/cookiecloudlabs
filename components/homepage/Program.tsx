@@ -53,7 +53,7 @@ export default function Program() {
             <p className="text-xl text-slate-300">
               The Programming and AI Program is designed
                 to be completed over approximately{" "}
-              <span className="font-semibold text-white">6–8 months</span>
+              <span className="font-semibold text-white">6-8 months</span>
               
                 , with flexibility to learn at your own pace.
             </p>

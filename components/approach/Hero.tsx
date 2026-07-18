@@ -10,15 +10,11 @@ export default function Hero() {
           Our Approach
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+        <h1 className="max-w-3xl mx-auto font-bold leading-tight text-[clamp(2.25rem,5vw,4rem)]">
           Think Clearly
-        </h1>
-
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight mt-4">
+          <br />
           Build Confidently
-        </h1>
-
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight mt-4">
+          <br />
           Solve Meaningfully
         </h1>
 
@@ -29,9 +25,7 @@ export default function Hero() {
           regardless of their educational background.
         </p>
 
-        <div className="mt-20 animate-bounce text-gray-500 text-3xl">
-          
-        </div>
+
 
         <div className="mt-20 animate-bounce text-gray-500 text-3xl">
           <ScrollIndicator

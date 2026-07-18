@@ -9,11 +9,9 @@ export default function Hero() {
           CookieSensei Workshop
         </p>
 
-        <h1 className="text-5xl font-bold leading-tight md:text-7xl">
+        <h1 className="max-w-3xl mx-auto font-bold leading-tight text-[clamp(2.25rem,5vw,4rem)]">
           From Idea
-        </h1>
-
-        <h1 className="mt-4 text-5xl font-bold leading-tight md:text-7xl">
+          <br />
           to a Live Website.
         </h1>
 

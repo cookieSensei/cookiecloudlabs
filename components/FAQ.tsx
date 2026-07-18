@@ -61,7 +61,7 @@ const faqs = [
   {
     question: "How long does the Program take?",
     answer:
-      "The Programming and AI Program is designed to be completed over approximately 6–8 months, with flexibility to learn at your own pace.",
+      "The Programming and AI Program is designed to be completed over approximately 6-8 months, with flexibility to learn at your own pace.",
   },
   {
     question: "Why is the founding cohort limited to 15 learners?",
