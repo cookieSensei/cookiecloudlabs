@@ -32,10 +32,14 @@ export default function Hero() {
         <div className="mt-20 animate-bounce text-gray-500 text-3xl">
           
         </div>
+
+        <div className="mt-20 animate-bounce text-gray-500 text-3xl">
           <ScrollIndicator
           text="Explore Our Principles"
-          targetId="principles"
-        />
+          targetId="principles"/>
+        </div>
+
+          
        </div>
 
     </section>
