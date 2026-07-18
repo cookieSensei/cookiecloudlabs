@@ -34,6 +34,17 @@ export default function Navbar() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  const handleLogoClick = () => {
+    if (isHome) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    closeMenu();
+  };
+
   const NavLinks = () => (
     <>
       {!isHome && (
@@ -74,8 +85,8 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-40 flex w-full items-center justify-between bg-[#0b1220]/70 px-4 py-4 backdrop-blur md:px-10">
-        <Link href="/" scroll>
-          <h1 className="cursor-pointer text-lg font-bold md:text-xl">
+        <Link href="/" scroll onClick={handleLogoClick}>
+          <h1 className="cursor-pointer text-lg font-bold transition hover:text-blue-400 md:text-xl">
             CookieSensei
           </h1>
         </Link>
@@ -106,6 +117,15 @@ export default function Navbar() {
         }`}
       >
         <div className="mt-10 flex flex-col gap-6 p-6">
+          <Link
+            href="/"
+            scroll
+            onClick={handleLogoClick}
+            className="text-lg font-bold"
+          >
+            CookieSensei
+          </Link>
+
           {!isHome && (
             <Link
               href="/"

@@ -1,6 +1,6 @@
 export default function LearningWithoutBarriers() {
   return (
-    <section className="py-32 px-6 bg-[#08101f]">
+    <section className="py-32 px-6">
 
       <div className="max-w-6xl mx-auto">
 
