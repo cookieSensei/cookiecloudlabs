@@ -121,7 +121,7 @@ export default function Navbar() {
             href="/"
             scroll
             onClick={handleLogoClick}
-            className="text-lg font-bold"
+            className="text-lg font-bold transition hover:text-blue-400"
           >
             CookieSensei
           </Link>
@@ -185,7 +185,7 @@ export default function Navbar() {
           <Link
             href="https://code.cookiesensei.com"
             onClick={closeMenu}
-            className="w-fit rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 text-white"
+            className="w-fit rounded-lg bg-blue-500 hover:bg-blue-600 transition-colors px-4 py-2 text-white"
           >
             Launch Lab
           </Link>
