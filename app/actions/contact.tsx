@@ -5,6 +5,7 @@ import ContactEmail from "@/components/emails/ContactEmail";
 import {
   ContactSchema,
   type ContactFormData,
+  type ContactFormErrors,
 } from "@/lib/validation/contact";
 
 
@@ -19,6 +20,7 @@ type ContactResult =
   | {
       success: false;
       message: string;
+      errors?: ContactFormErrors;
     };
 
 export async function sendContactMessage(
@@ -29,9 +31,17 @@ export async function sendContactMessage(
     const validationResult = ContactSchema.safeParse(formData);
 
     if (!validationResult.success) {
+      const errors: ContactFormErrors = {};
+
+      validationResult.error.issues.forEach((issue) => {
+        const field = issue.path[0] as keyof ContactFormErrors;
+        errors[field] = issue.message;
+      });
+
       return {
         success: false,
-        message: "Please check the form and try again.",
+        message: "Please check the highlighted fields.",
+        errors,
       };
     }
 

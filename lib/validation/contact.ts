@@ -8,6 +8,8 @@ export const ContactSchema = z.object({
     .max(100, "Name is too long"),
 
   email: z
+    .string()
+    .trim()
     .email("Please enter a valid email address"),
 
   topic: z
@@ -23,3 +25,7 @@ export const ContactSchema = z.object({
 });
 
 export type ContactFormData = z.infer<typeof ContactSchema>;
+
+export type ContactFormErrors = Partial<
+  Record<keyof ContactFormData, string>
+>;

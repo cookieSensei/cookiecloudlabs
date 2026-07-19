@@ -1,19 +1,19 @@
 "use client";
 
-import { ContactSchema } from "@/lib/validation/contact";
+
 import { useState } from "react";
 import { sendContactMessage } from "@/app/actions/contact";
+import {
+  ContactSchema,
+  type ContactFormErrors,
+} from "@/lib/validation/contact";
+
 
 interface ContactFormProps {
   onSuccess: () => void;
 }
 
-interface FormErrors {
-  name?: string;
-  email?: string;
-  topic?: string;
-  message?: string;
-}
+
 
 export default function ContactForm({
   onSuccess,
@@ -31,7 +31,8 @@ const [submitError, setSubmitError] = useState("");
 
 const [formData, setFormData] = useState(initialFormData);
 
-const [errors, setErrors] = useState<FormErrors>({});
+const [errors, setErrors] =
+  useState<ContactFormErrors>({});
 
 const handleChange = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -51,20 +52,24 @@ const handleChange = (
 };
 
 
-
+// validate function for debugging
 const validate = () => {
   const result = ContactSchema.safeParse(formData);
+
+  console.log("Form Data:", formData);
+  console.log("Validation Result:", result);
 
   if (result.success) {
     setErrors({});
     return true;
   }
 
-  const fieldErrors: FormErrors = {};
+  console.log("Issues:", result.error.issues);
+
+  const fieldErrors: ContactFormErrors = {};
 
   result.error.issues.forEach((issue) => {
-    const field = issue.path[0] as keyof FormErrors;
-
+    const field = issue.path[0] as keyof ContactFormErrors;
     fieldErrors[field] = issue.message;
   });
 
@@ -72,6 +77,28 @@ const validate = () => {
 
   return false;
 };
+
+// original validate function
+// const validate = () => {
+//   const result = ContactSchema.safeParse(formData);
+
+//   if (result.success) {
+//     setErrors({});
+//     return true;
+//   }
+
+//   const fieldErrors: FormErrors = {};
+
+//   result.error.issues.forEach((issue) => {
+//     const field = issue.path[0] as keyof FormErrors;
+
+//     fieldErrors[field] = issue.message;
+//   });
+
+//   setErrors(fieldErrors);
+
+//   return false;
+// };
 
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
@@ -88,6 +115,11 @@ const handleSubmit = async (e: React.FormEvent) => {
 
 if (!result.success) {
   setSubmitError(result.message);
+
+  if (result.errors) {
+    setErrors(result.errors);
+  }
+
   setIsSubmitting(false);
   return;
 }
