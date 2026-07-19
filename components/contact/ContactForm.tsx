@@ -1,6 +1,6 @@
 "use client";
 
-
+import { ContactSchema } from "@/lib/validation/contact";
 import { useState } from "react";
 import { sendContactMessage } from "@/app/actions/contact";
 
@@ -53,43 +53,24 @@ const handleChange = (
 
 
 const validate = () => {
-  const newErrors = {
-    name: "",
-    email: "",
-    topic: "",
-    message: "",
-  };
+  const result = ContactSchema.safeParse(formData);
 
-  let isValid = true;
-
-  if (!formData.name.trim()) {
-    newErrors.name = "Please enter your name.";
-    isValid = false;
+  if (result.success) {
+    setErrors({});
+    return true;
   }
 
-  if (!formData.email.trim()) {
-    newErrors.email = "Please enter your email address.";
-    isValid = false;
-  } else if (
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
-  ) {
-    newErrors.email = "Please enter a valid email address.";
-    isValid = false;
-  }
+  const fieldErrors: FormErrors = {};
 
-  if (!formData.topic) {
-    newErrors.topic = "Please select a topic.";
-    isValid = false;
-  }
+  result.error.issues.forEach((issue) => {
+    const field = issue.path[0] as keyof FormErrors;
 
-  if (!formData.message.trim()) {
-    newErrors.message = "Please enter your message.";
-    isValid = false;
-  }
+    fieldErrors[field] = issue.message;
+  });
 
-  setErrors(newErrors);
+  setErrors(fieldErrors);
 
-  return isValid;
+  return false;
 };
 
 const handleSubmit = async (e: React.FormEvent) => {

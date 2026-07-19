@@ -2,15 +2,15 @@
 
 import { Resend } from "resend";
 import ContactEmail from "@/components/emails/ContactEmail";
+import {
+  ContactSchema,
+  type ContactFormData,
+} from "@/lib/validation/contact";
+
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  topic: string;
-  message: string;
-}
+
 
 type ContactResult =
   | {
@@ -25,6 +25,16 @@ export async function sendContactMessage(
   formData: ContactFormData
 ): Promise<ContactResult> {
   try {
+
+    const validationResult = ContactSchema.safeParse(formData);
+
+    if (!validationResult.success) {
+      return {
+        success: false,
+        message: "Please check the form and try again.",
+      };
+    }
+
     const { error } = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "ashishchaudhary62@gmail.com", // Replace with your email
