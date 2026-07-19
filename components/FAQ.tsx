@@ -89,7 +89,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#0b1220] py-32 text-white">
+    <section className="py-32 text-white">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <p className="uppercase tracking-[0.3em] text-blue-400 font-medium">
