@@ -46,13 +46,48 @@ export default function ContactEmail({
             borderRadius: "12px",
           }}
         >
-          <Heading>
-            New Contact Form Submission
+          <Heading
+            style={{
+              fontSize: "28px",
+              fontWeight: "bold",
+              color: "#0f172a",
+              marginBottom: "8px",
+            }}
+          >
+            🍪 CookieSensei
           </Heading>
+
+          <Text
+            style={{
+              color: "#475569",
+              fontSize: "16px",
+              marginTop: "0",
+              marginBottom: "24px",
+            }}
+          >
+            You have received a new contact form submission.
+          </Text>
+
+          <Hr
+            style={{
+              borderColor: "#e2e8f0",
+              margin: "32px 0",
+            }}
+          />
 
           <Hr />
 
           <Section>
+            <Heading
+              as="h2"
+              style={{
+                fontSize: "18px",
+                color: "#1e293b",
+                marginBottom: "20px",
+              }}
+            >
+              Contact Information
+            </Heading>
 
             <Text>
               <strong>Name</strong>
@@ -72,15 +107,52 @@ export default function ContactEmail({
 
             <Text>{topic}</Text>
 
-            <Hr />
+            <Hr
+              style={{
+                borderColor: "#e2e8f0",
+                margin: "32px 0",
+              }}
+            />
 
-            <Text>
-              <strong>Message</strong>
+            <Heading
+              as="h2"
+              style={{
+                fontSize: "18px",
+                color: "#1e293b",
+                marginBottom: "20px",
+              }}
+            >
+              Message
+            </Heading>
+
+            <Text
+              style={{
+                whiteSpace: "pre-wrap",
+                lineHeight: "1.7",
+                color: "#334155",
+              }}
+            >
+              {message}
             </Text>
 
-            <Text>{message}</Text>
-
           </Section>
+
+          <Hr
+            style={{
+              borderColor: "#e2e8f0",
+              margin: "32px 0",
+            }}
+          />
+
+          <Text
+            style={{
+              fontSize: "13px",
+              color: "#94a3b8",
+              textAlign: "center",
+            }}
+          >
+            This message was sent from the CookieSensei contact form.
+          </Text>
 
         </Container>
       </Body>
