@@ -17,12 +17,93 @@ interface ContactEmailProps {
   message: string;
 }
 
+const styles = {
+  body: {
+    backgroundColor: "#f8fafc",
+    fontFamily: "Arial, sans-serif",
+  },
+
+  container: {
+    backgroundColor: "#ffffff",
+    maxWidth: "600px",
+    margin: "40px auto",
+    padding: "40px",
+    borderRadius: "12px",
+    border: "1px solid #e2e8f0",
+  },
+
+  title: {
+    fontSize: "28px",
+    fontWeight: "bold",
+    color: "#0f172a",
+    marginBottom: "8px",
+  },
+
+  subtitle: {
+    fontSize: "16px",
+    color: "#64748b",
+    marginTop: 0,
+    marginBottom: "32px",
+  },
+
+  divider: {
+    borderColor: "#e2e8f0",
+    margin: "28px 0",
+  },
+
+  sectionHeading: {
+    fontSize: "18px",
+    fontWeight: "bold",
+    color: "#0f172a",
+    marginBottom: "20px",
+  },
+
+  label: {
+    fontSize: "12px",
+    fontWeight: "bold",
+    color: "#64748b",
+    textTransform: "uppercase" as const,
+    letterSpacing: "1px",
+    marginBottom: "4px",
+  },
+
+  value: {
+    fontSize: "16px",
+    color: "#0f172a",
+    marginTop: 0,
+    marginBottom: "24px",
+  },
+
+  messageBox: {
+    backgroundColor: "#f8fafc",
+    border: "1px solid #e2e8f0",
+    borderRadius: "10px",
+    padding: "20px",
+  },
+
+  message: {
+    fontSize: "16px",
+    color: "#334155",
+    lineHeight: "1.7",
+    whiteSpace: "pre-wrap" as const,
+    margin: 0,
+  },
+
+  footer: {
+    fontSize: "13px",
+    color: "#94a3b8",
+    textAlign: "center" as const,
+    marginTop: "32px",
+  },
+};
+
 export default function ContactEmail({
   name,
   email,
   topic,
   message,
 }: ContactEmailProps) {
+  
   return (
     <Html>
       <Head />
@@ -31,126 +112,69 @@ export default function ContactEmail({
         New CookieSensei contact form submission
       </Preview>
 
-      <Body
-        style={{
-          backgroundColor: "#f8fafc",
-          fontFamily: "Arial, sans-serif",
-        }}
-      >
-        <Container
-          style={{
-            backgroundColor: "#ffffff",
-            maxWidth: "600px",
-            margin: "40px auto",
-            padding: "40px",
-            borderRadius: "12px",
-          }}
-        >
-          <Heading
-            style={{
-              fontSize: "28px",
-              fontWeight: "bold",
-              color: "#0f172a",
-              marginBottom: "8px",
-            }}
-          >
+      <Body style={styles.body}>
+
+        <Container style={styles.container}>
+
+          <Heading style={styles.title}>
             🍪 CookieSensei
           </Heading>
 
-          <Text
-            style={{
-              color: "#475569",
-              fontSize: "16px",
-              marginTop: "0",
-              marginBottom: "24px",
-            }}
-          >
+          <Text style={styles.subtitle}>
             You have received a new contact form submission.
           </Text>
 
-          <Hr
-            style={{
-              borderColor: "#e2e8f0",
-              margin: "32px 0",
-            }}
-          />
-
-          <Hr />
+          <Hr style={styles.divider} />
 
           <Section>
-            <Heading
-              as="h2"
-              style={{
-                fontSize: "18px",
-                color: "#1e293b",
-                marginBottom: "20px",
-              }}
-            >
+            <Heading as="h2" style={styles.sectionHeading}>
               Contact Information
             </Heading>
 
-            <Text>
-              <strong>Name</strong>
+            <Text style={styles.label}>
+              Name
             </Text>
 
-            <Text>{name}</Text>
-
-            <Text>
-              <strong>Email</strong>
+            <Text style={styles.value}>
+              {name}
             </Text>
 
-            <Text>{email}</Text>
 
-            <Text>
-              <strong>Topic</strong>
+            <Text style={styles.label}>
+              Email
             </Text>
 
-            <Text>{topic}</Text>
+            <Text style={styles.value}>
+              {email}
+            </Text>
 
-            <Hr
-              style={{
-                borderColor: "#e2e8f0",
-                margin: "32px 0",
-              }}
-            />
+            <Text style={styles.label}>
+              Topic
+            </Text>
 
-            <Heading
-              as="h2"
-              style={{
-                fontSize: "18px",
-                color: "#1e293b",
-                marginBottom: "20px",
-              }}
-            >
+            <Text style={styles.value}>
+              {topic}
+            </Text>
+
+
+
+            <Hr style={styles.divider} />
+
+            <Heading as="h2" style={styles.sectionHeading}>
               Message
             </Heading>
 
-            <Text
-              style={{
-                whiteSpace: "pre-wrap",
-                lineHeight: "1.7",
-                color: "#334155",
-              }}
-            >
-              {message}
-            </Text>
+            <Section style={styles.messageBox}>
+              <Text style={styles.message}>
+                {message}
+              </Text>
+            </Section>
 
           </Section>
 
-          <Hr
-            style={{
-              borderColor: "#e2e8f0",
-              margin: "32px 0",
-            }}
-          />
+          <Hr style={styles.divider} />
 
-          <Text
-            style={{
-              fontSize: "13px",
-              color: "#94a3b8",
-              textAlign: "center",
-            }}
-          >
+          <Text style={styles.footer}>
             This message was sent from the CookieSensei contact form.
           </Text>
 

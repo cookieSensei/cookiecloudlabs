@@ -29,10 +29,13 @@ export default function Hero() {
           I'd be happy to hear from you.
         </p>
 
-        <ScrollIndicator
+        <div className="mt-20 animate-bounce text-gray-500 text-3xl">
+          <ScrollIndicator
           text="Start the Conversation"
-          targetId="getting-started"
-        />
+          targetId="getting-started"/>
+        </div>
+
+        
 
       </div>
     </section>
