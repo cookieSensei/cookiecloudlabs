@@ -308,7 +308,7 @@ export const phases: CurriculumPhase[] = [
   ],
 
   confidenceStatement:
-    "I can continue learning and building beyond this course.",
+    "I can continue learning and building beyond this program.",
 
   purpose:
     "Technology evolves rapidly, but the ability to adapt lasts a career. Rather than preparing learners for today's tools alone, this phase develops the habits of continuous learning, critical thinking, collaboration, and responsible use of AI. The goal is to help learners become engineers who can confidently grow with the industry.",

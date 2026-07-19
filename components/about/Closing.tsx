@@ -26,7 +26,7 @@ export default function Closing() {
           </p>
 
           <p className="text-white text-2xl font-medium">
-            But learning how to learn can.
+            But learning how to learn, can.
           </p>
 
         </div>
