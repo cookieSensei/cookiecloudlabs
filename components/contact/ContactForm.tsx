@@ -8,6 +8,13 @@ interface ContactFormProps {
   onSuccess: () => void;
 }
 
+interface FormErrors {
+  name?: string;
+  email?: string;
+  topic?: string;
+  message?: string;
+}
+
 export default function ContactForm({
   onSuccess,
 }: ContactFormProps) {
@@ -24,12 +31,7 @@ const [submitError, setSubmitError] = useState("");
 
 const [formData, setFormData] = useState(initialFormData);
 
-const [errors, setErrors] = useState({
-  name: "",
-  email: "",
-  topic: "",
-  message: "",
-});
+const [errors, setErrors] = useState<FormErrors>({});
 
 const handleChange = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
