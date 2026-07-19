@@ -8,6 +8,9 @@ git pull
 echo "📦 Installing dependencies..."
 npm install
 
+echo "🧹 Cleaning previous build..."
+rm -rf .next
+
 echo "🏗️ Building application..."
 npm run build
 
