@@ -2,6 +2,7 @@
 
 
 import { useState } from "react";
+import { sendContactMessage } from "@/app/actions/contact";
 
 interface ContactFormProps {
   onSuccess: () => void;
@@ -94,15 +95,17 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   setIsSubmitting(true);
 
-  // Simulate a network request
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-
-  console.log(formData);
+  const result = await sendContactMessage(formData);
 
   setIsSubmitting(false);
 
+  if (!result.success) {
+    alert(result.message);
+    return;
+  }
+
   onSuccess();
-  };
+};
 
 
 
@@ -152,7 +155,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           type="email"
           placeholder="you@example.com"
           className={`w-full rounded-xl border bg-slate-950 px-4 py-3 outline-none transition ${
-            errors.name
+            errors.email
               ? "border-red-500"
               : "border-slate-700 focus:border-blue-500"
           }`}
@@ -226,7 +229,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             rows={6}
             placeholder="Tell me a little about what you're looking for, or simply ask your question."
             className={`w-full rounded-xl border bg-slate-950 px-4 py-3 outline-none transition ${
-              errors.name
+              errors.message
                 ? "border-red-500"
                 : "border-slate-700 focus:border-blue-500"
             }`}
