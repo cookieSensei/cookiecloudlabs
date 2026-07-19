@@ -14,6 +14,7 @@ export default function ContactForm({
 
 
 const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitError, setSubmitError] = useState("");
 
 const [formData, setFormData] = useState({
   name: "",
@@ -93,6 +94,8 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   if (!validate()) return;
 
+  setSubmitError("");
+
   setIsSubmitting(true);
 
   const result = await sendContactMessage(formData);
@@ -100,7 +103,8 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(false);
 
 if (!result.success) {
-  alert(result.message);
+  setSubmitError(result.message);
+  setIsSubmitting(false);
   return;
 }
 
@@ -259,7 +263,11 @@ onSuccess();
       </div>
 
       {/* Submit */}
-
+      {submitError && (
+        <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+          {submitError}
+        </div>
+      )}
       <button
         type="submit"
         disabled={isSubmitting}

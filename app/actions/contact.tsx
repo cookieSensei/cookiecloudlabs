@@ -12,7 +12,18 @@ interface ContactFormData {
   message: string;
 }
 
-export async function sendContactMessage(formData: ContactFormData) {
+type ContactResult =
+  | {
+      success: true;
+    }
+  | {
+      success: false;
+      message: string;
+    };
+
+export async function sendContactMessage(
+  formData: ContactFormData
+): Promise<ContactResult> {
   try {
     const { error } = await resend.emails.send({
       from: "onboarding@resend.dev",
