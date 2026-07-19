@@ -12,7 +12,7 @@ presentation, document, and application should look, feel, and communicate.
 Our goal is consistency.
 
 Whether someone visits our homepage, reads our curriculum, attends a workshop,
-or uses CookieCloud Labs, the experience should feel like it belongs to the
+or uses CookieSensei Labs, the experience should feel like it belongs to the
 same educational institution.
 
 ---

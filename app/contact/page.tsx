@@ -7,7 +7,7 @@ export default function Contact() {
       </h1>
 
       <p className="text-gray-300 mb-6">
-        For bootcamp enrollment, support, or platform access inquiries,
+        For program enrollment, workshop queries, support, or platform access inquiries,
         feel free to contact us using the details below.
       </p>
 
@@ -15,7 +15,7 @@ export default function Contact() {
 
         <p><strong>Founder:</strong> Ashish Chaudhary</p>
 
-        <p><strong>Business:</strong> CookieCloud Labs</p>
+        <p><strong>Business:</strong> CookieSensei Labs</p>
 
         <p>
           <strong>Email:</strong>{" "}

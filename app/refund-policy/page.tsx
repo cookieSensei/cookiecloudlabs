@@ -4,7 +4,7 @@ export default function RefundPolicy() {
       <h1 className="text-3xl font-bold mb-6">Refund Policy</h1>
 
       <p>
-        Payments made for CookieCloud Labs programs are refundable
+        Payments made for CookieSensei Labs programs are refundable
         within 7 days of purchase if the platform has not been used extensively.
       </p>
 

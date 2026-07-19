@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 
       <p>
-        CookieCloud Labs ("we", "our", "us") operates cookiesensei.com.
+        CookieSensei Labs ("we", "our", "us") operates cookiesensei.com.
         This page informs you of our policies regarding the collection,
         use and disclosure of personal information.
       </p>
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
 
       <h2 className="text-xl font-semibold mt-6">How We Use Your Information</h2>
       <ul className="list-disc ml-6">
-        <li>Provide access to CookieCloud Labs</li>
+        <li>Provide access to CookieSensei Labs</li>
         <li>Process payments</li>
         <li>Improve our platform</li>
       </ul>
