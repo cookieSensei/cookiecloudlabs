@@ -99,12 +99,28 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   setIsSubmitting(false);
 
-  if (!result.success) {
-    alert(result.message);
-    return;
-  }
+if (!result.success) {
+  alert(result.message);
+  return;
+}
 
-  onSuccess();
+// Reset the form
+setFormData({
+  name: "",
+  email: "",
+  topic: "",
+  message: "",
+});
+
+// Clear any validation errors
+setErrors({
+  name: "",
+  email: "",
+  topic: "",
+  message: "",
+});
+
+onSuccess();
 };
 
 

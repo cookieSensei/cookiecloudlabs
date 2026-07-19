@@ -1,6 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
+import ContactEmail from "@/components/emails/ContactEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -18,19 +19,14 @@ export async function sendContactMessage(formData: ContactFormData) {
       to: "ashishchaudhary62@gmail.com", // Replace with your email
       replyTo: formData.email,
       subject: `CookieSensei Contact - ${formData.topic}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-
-        <p><strong>Name:</strong> ${formData.name}</p>
-
-        <p><strong>Email:</strong> ${formData.email}</p>
-
-        <p><strong>Topic:</strong> ${formData.topic}</p>
-
-        <hr>
-
-        <p>${formData.message.replace(/\n/g, "<br />")}</p>
-      `,
+      react: (
+        <ContactEmail
+            name={formData.name}
+            email={formData.email}
+            topic={formData.topic}
+            message={formData.message}
+        />
+        ),
     });
 
     if (error) {
@@ -43,10 +39,12 @@ export async function sendContactMessage(formData: ContactFormData) {
     return {
       success: true,
     };
-  } catch {
-    return {
-      success: false,
-      message: "Something went wrong. Please try again.",
-    };
-  }
+  } catch (error) {
+  console.error(error);
+
+  return {
+    success: false,
+    message: "Something went wrong. Please try again.",
+  };
+}
 }
