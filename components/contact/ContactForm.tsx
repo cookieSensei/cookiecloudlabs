@@ -12,16 +12,17 @@ export default function ContactForm({
   onSuccess,
 }: ContactFormProps) {
 
-
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitError, setSubmitError] = useState("");
-
-const [formData, setFormData] = useState({
+const initialFormData = {
   name: "",
   email: "",
   topic: "",
   message: "",
-});
+};
+
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitError, setSubmitError] = useState("");
+
+const [formData, setFormData] = useState(initialFormData);
 
 const [errors, setErrors] = useState({
   name: "",
@@ -123,6 +124,10 @@ setErrors({
   topic: "",
   message: "",
 });
+
+setFormData(initialFormData);
+setErrors({});
+setSubmitError("");
 
 onSuccess();
 };
