@@ -12,7 +12,7 @@ export default function Hero() {
 
         <h1 className="max-w-4xl mx-auto font-bold leading-tight text-[clamp(2.25rem,5vw,4rem)]">
           Learning doesn't
-          <br />
+          
           end at graduation.
         </h1>
 
