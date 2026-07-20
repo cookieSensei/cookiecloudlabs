@@ -69,6 +69,10 @@ export default function Navbar() {
         Workshops
       </Link>
 
+      <Link href="/internship" scroll className={linkClass("/internship")}>
+        Internship
+      </Link>
+
       <Link href="/contact" scroll className={linkClass("/contact")}>
         Contact
       </Link>
@@ -175,6 +179,15 @@ export default function Navbar() {
             className={`text-lg ${linkClass("/workshops")}`}
           >
             Workshops
+          </Link>
+
+          <Link
+            href="/internship"
+            scroll
+            onClick={closeMenu}
+            className={`text-lg ${linkClass("/internship")}`}
+          >
+            Internships
           </Link>
 
           <Link
