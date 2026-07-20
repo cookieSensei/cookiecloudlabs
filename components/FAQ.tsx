@@ -51,7 +51,7 @@ const faqs = [
   {
     question: "What will I build?",
     answer:
-      "You'll build progressively more challenging projects—from Python applications to intelligent software powered by Artificial Intelligence. Every phase includes practical work that reinforces what you've learned.",
+      "You'll build progressively more challenging projects-from Python applications to intelligent software powered by Artificial Intelligence. Every phase includes practical work that reinforces what you've learned.",
   },
   {
     question: "Can I attend a Workshop before joining the program?",

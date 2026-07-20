@@ -34,7 +34,7 @@ export default function WhoItsFor() {
 
         <p className="mt-8 max-w-3xl text-xl text-slate-300 leading-relaxed">
           CookieSensei is designed for curious learners who want to understand
-          technology by building with it—not just watching tutorials.
+          technology by building with it-not just watching tutorials.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">

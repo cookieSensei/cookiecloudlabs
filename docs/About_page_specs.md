@@ -53,7 +53,7 @@ Before writing their first line of code, learners were expected to install softw
 
 For many, the first lesson became frustration instead of discovery.
 
-I wanted the first lesson to be about learning—not troubleshooting.
+I wanted the first lesson to be about learning-not troubleshooting.
 
 That observation led to one of the core ideas behind CookieSensei.
 
@@ -133,7 +133,7 @@ Technology will continue to change.
 
 The ability to learn,
 the ability to build,
-and the willingness to contribute—
+and the willingness to contribute-
 
 those remain valuable throughout a lifetime.
 

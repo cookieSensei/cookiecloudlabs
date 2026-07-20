@@ -84,7 +84,7 @@ export default function LearningWithoutBarriers() {
 
             <p className="text-gray-400 leading-relaxed">
               Spend your time understanding concepts, experimenting, and
-              building—not troubleshooting installations.
+              building, not troubleshooting installations.
             </p>
 
           </div>

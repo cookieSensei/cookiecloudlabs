@@ -19,8 +19,8 @@ export default function Mission() {
         {/* Supporting Text */}
 
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 leading-relaxed mb-24">
-          Everything we build at CookieSensei—from our curriculum to our
-          learning environment—exists to help learners develop the confidence
+          Everything we build at CookieSensei, from our curriculum to our
+          learning environment, exists to help learners develop the confidence
           to think clearly, build confidently, and solve meaningfully.
         </p>
 

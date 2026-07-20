@@ -58,7 +58,7 @@ Students should create something early.
 
 Concepts become easier to understand when learners have already experienced the problem those concepts solve.
 
-Theory should explain practice—not replace it.
+Theory should explain practice-not replace it.
 
 ---
 
@@ -123,7 +123,7 @@ This includes:
 - Browser-based Cloud Labs
 - AI-assisted development where appropriate
 
-Professional tools should become familiar—not intimidating.
+Professional tools should become familiar-not intimidating.
 
 ---
 
@@ -137,7 +137,7 @@ Not resolving dependency conflicts.
 
 Not troubleshooting incompatible operating systems.
 
-Infrastructure should support learning—not become the lesson.
+Infrastructure should support learning-not become the lesson.
 
 ---
 
@@ -223,7 +223,7 @@ A successful CookieSensei learner should:
 
 ✔ Continue learning without constant guidance.
 
-Success is measured by confidence and capability—not by certificates.
+Success is measured by confidence and capability-not by certificates.
 
 ---
 
