@@ -1,5 +1,15 @@
+
+"use client";
+
+import { useState } from "react";
+import ContactModal from "./ContactModal";
+
+
 export default function ContactMethods() {
+  const [open, setOpen] = useState(false);
+  
   return (
+    <>
     <section className="py-32 px-6 border-t border-slate-800">
       <div className="max-w-6xl mx-auto">
 
@@ -28,32 +38,34 @@ export default function ContactMethods() {
 
         <div className="mt-20 grid gap-8 md:grid-cols-2">
 
-          {/* Email */}
 
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/30 p-10">
 
-            <p className="uppercase tracking-[0.2em] text-blue-400 font-medium">
-              Email
-            </p>
+        {/* Send a Message */}
 
-            <h3 className="mt-4 text-2xl font-semibold">
-              ashishchaudhary62@gmail.com
-            </h3>
+        <div className="rounded-2xl border border-slate-800 bg-slate-900/30 p-10">
 
-            <p className="mt-6 text-slate-300 leading-relaxed">
-              Best for questions about the Program,
-              Workshops, partnerships,
-              or anything you'd like to discuss in detail.
-            </p>
+          <p className="uppercase tracking-[0.2em] text-blue-400 font-medium">
+            Contact 
+          </p>
 
-            <a
-              href="mailto:ashishchaudhary62@gmail.com"
-              className="inline-flex mt-8 rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white transition hover:bg-blue-600"
-            >
-              Send an Email
-            </a>
+          <h3 className="mt-4 text-2xl font-semibold">
+            Send a Message
+          </h3>
 
-          </div>
+          <p className="mt-6 text-slate-300 leading-relaxed">
+            Best for questions about the Programming and AI Program,
+            Workshops, partnerships, or anything you'd like to discuss
+            in detail.
+          </p>
+
+          <button
+            onClick={() => setOpen(true)}
+            className="inline-flex mt-8 rounded-xl bg-blue-500 px-6 py-3 font-semibold text-white transition hover:bg-blue-600"
+          >
+            Send a Message
+          </button>
+
+        </div>
 
           {/* WhatsApp */}
 
@@ -94,5 +106,13 @@ export default function ContactMethods() {
 
       </div>
     </section>
+    
+    <ContactModal
+      open={open}
+      onClose={() => setOpen(false)}
+    />
+    
+    </>
+
   );
 }

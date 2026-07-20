@@ -10,12 +10,12 @@ export default function ContactPage() {
   return (
     <>
       <Hero />
-      {/* <GettingStarted />
+      <GettingStarted />
       <ContactOptions />
       <Enrollment />
       <ContactMethods />
       <PersonalNote />
-      <Closing /> */}
+      <Closing />
     </>
   );
 }
