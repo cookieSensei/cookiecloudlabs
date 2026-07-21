@@ -1,14 +1,9 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-
-type RegistrationFormData = {
-  fullName: string;
-  email: string;
-  githubUsername: string;
-  workshop: string;
-  agreement: boolean;
-};
+import { createClient } from "@/lib/supabase/client";
+import {type RegistrationFormData} from "@/types/workshop";
+import { registerWorkshop } from "@/actions/workshop";
 
 export default function RegistrationForm() {
 
@@ -21,9 +16,15 @@ export default function RegistrationForm() {
     formState: { errors },
   } = useForm<RegistrationFormData>();
 
-  const onSubmit = (data: RegistrationFormData) => {
-    console.log(data);
-  };
+const onSubmit = async (data: RegistrationFormData) => {
+  try {
+    await registerWorkshop(data);
+
+    console.log("Registration saved!");
+  } catch (error) {
+    console.error(error);
+  }
+};
 
   return (
     <section
