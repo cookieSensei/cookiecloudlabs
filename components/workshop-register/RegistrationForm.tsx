@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { createClient } from "@/lib/supabase/client";
-import {type RegistrationFormData} from "@/types/workshop";
+import {type RegistrationFormData} from "@/workshop-dashboard/types/workshop";
 import { registerWorkshop } from "@/actions/workshop";
 
 export default function RegistrationForm() {

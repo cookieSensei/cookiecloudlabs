@@ -1,7 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
-import type { RegistrationFormData } from "@/types/workshop";
+import type { RegistrationFormData } from "@/workshop-dashboard/types/workshop";
 
 export async function registerWorkshop(
   data: RegistrationFormData
