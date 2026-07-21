@@ -24,3 +24,28 @@ export async function getWorkshopRegistrations(): Promise<WorkshopRegistration[]
 
   return data ?? [];
 }
+
+export async function getWorkshopRegistrationById(id: string) {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("workshop_registrations")
+    .select(`
+      id,
+      full_name,
+      email,
+      github_username,
+      workshop,
+      agreement,
+      status,
+      created_at
+    `)
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
+}

@@ -1,4 +1,7 @@
 import type { WorkshopRegistration } from "@/workshop-dashboard/types/workshop";
+import StatusBadge from "../ui/StatusBadge";
+import Link from "next/link";
+
 
 type WorkshopTableProps = {
   registrations: WorkshopRegistration[];
@@ -18,6 +21,7 @@ export default function WorkshopTable({
             <th className="px-4 py-3 text-left">Workshop</th>
             <th className="px-4 py-3 text-left">Status</th>
             <th className="px-4 py-3 text-left">Registered</th>
+            <th className="px-4 py-3 text-left">Actions</th>
           </tr>
         </thead>
 
@@ -44,10 +48,8 @@ export default function WorkshopTable({
               </td>
 
               <td>
-              <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
-                {registration.status}
-              </span>
-            </td>
+              <StatusBadge status={registration.status} />
+              </td>
 
               <td className="px-4 py-3">
                 {new Date(registration.created_at).toLocaleString("en-IN", {
@@ -55,6 +57,15 @@ export default function WorkshopTable({
                   timeStyle: "short",
                   timeZone: "Asia/Kolkata",
                 })}
+              </td>
+
+              <td className="px-4 py-3">
+                <Link
+                  href={`/admin/workshops/${registration.id}`}
+                  className="rounded-lg bg-slate-800 px-3 py-2 text-sm hover:bg-slate-700"
+                >
+                  View
+                </Link>
               </td>
             </tr>
           ))}
