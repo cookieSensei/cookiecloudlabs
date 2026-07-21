@@ -7,11 +7,12 @@ export type RegistrationFormData = {
 };
 
 export type WorkshopRegistration = {
-  id: number;
+  id: string;
   full_name: string;
   email: string;
   github_username: string;
   workshop: string;
   agreement: boolean;
+  status: string;
   created_at: string;
 };

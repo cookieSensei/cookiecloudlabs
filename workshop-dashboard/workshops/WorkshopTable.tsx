@@ -16,6 +16,7 @@ export default function WorkshopTable({
             <th className="px-4 py-3 text-left">Email</th>
             <th className="px-4 py-3 text-left">GitHub</th>
             <th className="px-4 py-3 text-left">Workshop</th>
+            <th className="px-4 py-3 text-left">Status</th>
             <th className="px-4 py-3 text-left">Registered</th>
           </tr>
         </thead>
@@ -41,6 +42,12 @@ export default function WorkshopTable({
               <td className="px-4 py-3">
                 {registration.workshop}
               </td>
+
+              <td>
+              <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
+                {registration.status}
+              </span>
+            </td>
 
               <td className="px-4 py-3">
                 {new Date(registration.created_at).toLocaleString("en-IN", {

@@ -13,6 +13,7 @@ export async function getWorkshopRegistrations(): Promise<WorkshopRegistration[]
       github_username,
       workshop,
       agreement,
+      status,
       created_at
     `)
     .order("created_at", { ascending: false });
