@@ -22,8 +22,13 @@ export type Database = {
           full_name: string
           github_username: string
           id: number
+          paid_at: string | null
+          payment_status: string
+          razorpay_order_id: string | null
+          razorpay_payment_id: string | null
+          razorpay_signature: string | null
           status: string
-          workshop_id: number | null
+          workshop_id: number
         }
         Insert: {
           agreement: boolean
@@ -32,8 +37,13 @@ export type Database = {
           full_name: string
           github_username: string
           id?: number
+          paid_at?: string | null
+          payment_status?: string
+          razorpay_order_id?: string | null
+          razorpay_payment_id?: string | null
+          razorpay_signature?: string | null
           status?: string
-          workshop_id?: number | null
+          workshop_id: number
         }
         Update: {
           agreement?: boolean
@@ -42,8 +52,13 @@ export type Database = {
           full_name?: string
           github_username?: string
           id?: number
+          paid_at?: string | null
+          payment_status?: string
+          razorpay_order_id?: string | null
+          razorpay_payment_id?: string | null
+          razorpay_signature?: string | null
           status?: string
-          workshop_id?: number | null
+          workshop_id?: number
         }
         Relationships: [
           {

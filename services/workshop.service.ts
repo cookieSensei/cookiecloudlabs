@@ -82,3 +82,45 @@ export async function getWorkshops() {
 
   return data;
 }
+
+export async function getRegistrationForPayment(id: number) {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("workshop_registrations")
+    .select(`
+      id,
+      payment_status,
+      workshop:workshops!workshop_registrations_workshop_id_fkey (
+        id,
+        title,
+        price
+      )
+    `)
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
+}
+
+export async function saveRazorpayOrderId(
+  registrationId: number,
+  razorpayOrderId: string
+) {
+  const supabase = await createClient();
+
+  const { error } = await supabase
+    .from("workshop_registrations")
+    .update({
+      razorpay_order_id: razorpayOrderId,
+    })
+    .eq("id", registrationId);
+
+  if (error) {
+    throw new Error(error.message);
+  }
+}
