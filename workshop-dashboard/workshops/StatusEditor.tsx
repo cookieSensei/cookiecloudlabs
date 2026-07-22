@@ -6,7 +6,7 @@ import { updateRegistrationStatus } from "@/app/admin/workshops/[id]/actions";
 
 
 type StatusEditorProps = {
-  id: string;
+  id: number;
   currentStatus: string;
   onStatusUpdated: (status: string) => void;
 };

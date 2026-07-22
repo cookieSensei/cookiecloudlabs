@@ -1,7 +1,5 @@
 import { getWorkshopRegistrationById } from "@/services/workshop.service";
-import DetailField from "@/workshop-dashboard/ui/DetailField";
-import StatusBadge from "@/workshop-dashboard/ui/StatusBadge";
-import StatusEditor from "@/workshop-dashboard/workshops/StatusEditor";
+
 import RegistrationDetails from "@/workshop-dashboard/workshops/RegistrationDetails";
 
 type RegistrationPageProps = {
@@ -15,7 +13,7 @@ export default async function RegistrationPage({
 }: RegistrationPageProps) {
   const { id } = await params;
 
-  const registration = await getWorkshopRegistrationById(id);
+  const registration = await getWorkshopRegistrationById(Number(id));
 
 return (
   <main className="p-8">

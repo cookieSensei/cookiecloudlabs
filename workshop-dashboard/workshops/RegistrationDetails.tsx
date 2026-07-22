@@ -37,7 +37,7 @@ export default function RegistrationDetails({
 
         <DetailField
           label="Workshop"
-          value={registration.workshop}
+          value={registration.workshop.title}
         />
 
         <DetailField label="Status">

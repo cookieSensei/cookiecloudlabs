@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 
 export async function updateRegistrationStatus(
-  id: string,
+  id: number,
   status: string
 ) {
   // console.log("Server Action Called", { id, status });

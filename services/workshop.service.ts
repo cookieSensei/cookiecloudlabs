@@ -37,10 +37,12 @@ export async function getWorkshopRegistrations(): Promise<WorkshopRegistration[]
     throw new Error(error.message);
   }
   
-  return data ?? [];
+  return (data ?? []) as WorkshopRegistration[];
 }
 
-export async function getWorkshopRegistrationById(id: string) {
+export async function getWorkshopRegistrationById(
+  id: number
+): Promise<WorkshopRegistration> {
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -65,7 +67,7 @@ export async function getWorkshopRegistrationById(id: string) {
     throw new Error(error.message);
   }
 
-  return data;
+  return data as unknown as WorkshopRegistration;;
 }
 
 export async function getWorkshops() {

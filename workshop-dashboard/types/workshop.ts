@@ -1,3 +1,7 @@
+import type { Tables } from "@/lib/database.types";
+
+export type Workshop = Tables<"workshops">;
+
 export type RegistrationFormData = {
     fullName: string;
     email: string;
@@ -8,24 +12,14 @@ export type RegistrationFormData = {
     agreement: boolean;
 }
 
-export type Workshop = {
-  id: number;
-  title: string;
-  price: number;
-  capacity: number;
-  scheduled_at: string;
-  duration_minutes: number;
-};
 
-export type WorkshopRegistration = {
-  id: number;
-  full_name: string;
-  email: string;
-  github_username: string;
 
+
+type WorkshopRegistrationRow = Tables<"workshop_registrations">;
+
+export type WorkshopRegistration = Omit<
+  WorkshopRegistrationRow,
+  "workshop_id"
+> & {
   workshop: Workshop;
-
-  agreement: boolean;
-  status: string;
-  created_at: string;
 };
