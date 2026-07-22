@@ -15,7 +15,7 @@ export async function registerWorkshop(
         full_name: data.fullName,
         email: data.email,
         github_username: data.githubUsername,
-        workshop: data.workshop,
+        workshop_id: Number(data.workshopId),
         agreement: data.agreement,
       },
     ]);

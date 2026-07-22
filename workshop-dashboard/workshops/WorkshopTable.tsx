@@ -44,7 +44,7 @@ export default function WorkshopTable({
               </td>
 
               <td className="px-4 py-3">
-                {registration.workshop}
+                {registration.workshop.title}
               </td>
 
               <td>

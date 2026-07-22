@@ -17,8 +17,8 @@ export default function WorkshopDashboard({
   registrations,
 }: WorkshopDashboardProps) {
   const [search, setSearch] = useState("");
-  const workshops = useMemo(() => {
-  return [...new Set(registrations.map((r) => r.workshop))].sort();
+const workshops = useMemo(() => {
+  return [...new Set(registrations.map((r) => r.workshop.title))].sort();
 }, [registrations]);
 
   const [selectedWorkshop, setSelectedWorkshop] = useState("");
@@ -32,12 +32,13 @@ const filteredRegistrations = useMemo(() => {
       registration.full_name.toLowerCase().includes(query) ||
       registration.email.toLowerCase().includes(query) ||
       registration.github_username.toLowerCase().includes(query) ||
-      registration.workshop.toLowerCase().includes(query);
+      registration.workshop.title
+  .toLowerCase()
+  .includes(query)
 
     const matchesWorkshop =
       !selectedWorkshop ||
-      registration.workshop === selectedWorkshop;
-
+      registration.workshop.title === selectedWorkshop
     return matchesSearch && matchesWorkshop;
   });
 }, [registrations, search, selectedWorkshop]);

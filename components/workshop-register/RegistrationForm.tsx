@@ -156,7 +156,7 @@ const onSubmit = async (data: RegistrationFormData) => {
             </h3>
 
             <select
-            {...register("workshop", {
+            {...register("workshopId", {
                 required: "Please select a workshop.",
             })}
             className={inputStyles}
@@ -164,18 +164,21 @@ const onSubmit = async (data: RegistrationFormData) => {
             <option value="">
                 Select Workshop
             </option>
+            
 
-            <option 
-            value="From Idea to a Live Website"
-            className="bg-slate-900 text-white">
+            
+            <option
+                value="1"
+                className="bg-slate-900 text-white"
+                >
                 From Idea to a Live Website
-            </option>
+                </option>
             </select>
 
-            {errors.workshop && (
-            <p className="mt-2 text-sm text-red-400">
-                {errors.workshop.message}
-            </p>
+            {errors.workshopId && (
+                <p className="mt-2 text-sm text-red-400">
+                    {errors.workshopId.message}
+                </p>
             )}
 
             </section>

@@ -11,6 +11,8 @@ export default function WorkshopFilter({
   value,
   onChange,
 }: WorkshopFilterProps) {
+
+    
   return (
     <select
       value={value}
