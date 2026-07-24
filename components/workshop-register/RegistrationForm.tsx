@@ -1,12 +1,14 @@
 "use client";
+import { useState } from "react";
+
 
 import { useForm } from "react-hook-form";
-import { createClient } from "@/lib/supabase/client";
+
 import {type RegistrationFormData} from "@/workshop-dashboard/types/workshop";
 import { registerWorkshop } from "@/actions/workshop";
 
 export default function RegistrationForm() {
-
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const inputStyles =
   "w-full rounded-xl border border-slate-700 bg-transparent px-4 py-3 outline-none transition focus:border-blue-500";
   
@@ -17,12 +19,18 @@ export default function RegistrationForm() {
   } = useForm<RegistrationFormData>();
 
 const onSubmit = async (data: RegistrationFormData) => {
-  try {
-    await registerWorkshop(data);
+  setIsSubmitting(true);
 
-    console.log("Registration saved!");
+  try {
+    const registration = await registerWorkshop(data);
+
+    console.log(registration);
+
+    // Razorpay comes next
   } catch (error) {
     console.error(error);
+  } finally {
+    setIsSubmitting(false);
   }
 };
 
@@ -48,9 +56,7 @@ const onSubmit = async (data: RegistrationFormData) => {
         {/* Intro */}
 
         <p className="mt-10 text-center text-lg md:text-xl text-slate-300 leading-relaxed">
-          Complete the form below to register your interest in an upcoming
-          CookieSensei workshop. Payment instructions will be shared after we
-          receive your registration.
+          Complete the form below to continue to secure payment and reserve your seat.
         </p>
 
         <form
@@ -218,11 +224,14 @@ const onSubmit = async (data: RegistrationFormData) => {
             </section>
             <div className="pt-4">
                 <button
-                type="submit"
-                className="w-full rounded-xl bg-blue-500 px-8 py-4 font-semibold text-white transition hover:bg-blue-600"
-                >
-                Continue to Registration
-                </button>
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full rounded-xl bg-blue-500 px-8 py-4 font-semibold text-white transition hover:bg-blue-600 disabled:opacity-50"
+                    >
+                    {isSubmitting
+                        ? "Creating Registration..."
+                        : "Continue to Registration"}
+                    </button>
             </div>
         </form>
 

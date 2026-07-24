@@ -8,19 +8,21 @@ export async function registerWorkshop(
 ) {
   const supabase = await createClient();
 
-  const { error } = await supabase
+  const { data: registration, error } = await supabase
     .from("workshop_registrations")
-    .insert([
-      {
-        full_name: data.fullName,
-        email: data.email,
-        github_username: data.githubUsername,
-        workshop_id: Number(data.workshopId),
-        agreement: data.agreement,
-      },
-    ]);
+    .insert({
+      full_name: data.fullName,
+      email: data.email,
+      github_username: data.githubUsername,
+      workshop_id: Number(data.workshopId),
+      agreement: data.agreement,
+    })
+    .select("id")
+    .single();
 
   if (error) {
     throw new Error(error.message);
   }
+
+  return registration;
 }
